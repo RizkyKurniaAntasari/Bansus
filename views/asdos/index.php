@@ -10,31 +10,7 @@ require_once '../head-nav-foo/navbar.php';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Open Recruitment Asisten Dosen Ganjil 2025</title>
-    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#ffcc00",
-                        secondary: "#000000"
-                    },
-                    borderRadius: {
-                        none: "0px",
-                        sm: "4px",
-                        DEFAULT: "8px",
-                        md: "12px",
-                        lg: "16px",
-                        xl: "20px",
-                        "2xl": "24px",
-                        "3xl": "32px",
-                        full: "9999px",
-                        button: "8px",
-                    },
-                },
-            },
-        };
-    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -47,16 +23,13 @@ require_once '../head-nav-foo/navbar.php';
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
     <style>
+        /* Keeping custom styles that are not part of Tailwind defaults */
         :where([class^="ri-"])::before {
             content: "\f3c2";
         }
 
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-
         .timeline-container::after {
-            content: '';
+            content: "";
             position: absolute;
             width: 100%;
             height: 4px;
@@ -72,11 +45,11 @@ require_once '../head-nav-foo/navbar.php';
         }
 
         .timeline-point::before {
-            content: '';
+            content: "";
             position: absolute;
             width: 20px;
             height: 20px;
-            background-color: #3b82f6;
+            background-color: white;
             border-radius: 50%;
             top: 50%;
             left: 50%;
@@ -110,7 +83,10 @@ require_once '../head-nav-foo/navbar.php';
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 100%);
+            background: linear-gradient(to right,
+                    rgba(0, 0, 0, 0.7) 0%,
+                    rgba(0, 0, 0, 0.3) 50%,
+                    rgba(0, 0, 0, 0) 100%);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -156,12 +132,14 @@ require_once '../head-nav-foo/navbar.php';
         }
 
         input[type="checkbox"]:checked {
-            background-color: #3b82f6;
-            border-color: #3b82f6;
+            background-color: #ffcc00;
+            /* warna kuning */
+            border-color: #ffcc00;
+            /* warna kuning */
         }
 
         input[type="checkbox"]:checked::after {
-            content: '';
+            content: "";
             position: absolute;
             width: 5px;
             height: 10px;
@@ -180,8 +158,18 @@ require_once '../head-nav-foo/navbar.php';
 </head>
 
 <body class="bg-gray-50">
-    <!-- Hero Section with Slider -->
-    <section id="beranda" class="pt-16">
+    <div
+        id="mobile-menu"
+        class="fixed inset-0 bg-white z-50 hidden flex-col pt-16">
+        <div class="container mx-auto px-4 py-4">
+            <a href="#beranda" class="block py-3 text-lg font-medium border-b border-gray-100">Beranda</a>
+            <a href="#daftar-asdos" class="block py-3 text-lg font-medium border-b border-gray-100">Daftar Asdos</a>
+            <a href="#jadwal-wawancara" class="block py-3 text-lg font-medium border-b border-gray-100">Jadwal Wawancara</a>
+            <a href="#pengumuman" class="block py-3 text-lg font-medium border-b border-gray-100">Pengumuman</a>
+            <a href="#kontak" class="block py-3 text-lg font-medium">Kontak Kami</a>
+        </div>
+    </div>
+    <section id="beranda" class="">
         <div class="slider-container">
             <div class="slider">
                 <div
@@ -198,7 +186,7 @@ require_once '../head-nav-foo/navbar.php';
                             </p>
                             <a
                                 href="#daftar"
-                                class="bg-primary hover:bg-black text-white font-semibold py-3 px-8 !rounded-button whitespace-nowrap inline-flex items-center">
+                                class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-8 rounded-lg whitespace-nowrap inline-flex items-center">
                                 Daftar Sekarang
                                 <div class="w-5 h-5 ml-2 flex items-center justify-center">
                                     <i class="ri-arrow-right-line"></i>
@@ -221,7 +209,7 @@ require_once '../head-nav-foo/navbar.php';
                             </p>
                             <a
                                 href="#daftar"
-                                class="bg-primary hover:bg-blue-600 text-white font-semibold py-3 px-8 !rounded-button whitespace-nowrap inline-flex items-center">
+                                class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-8 rounded-lg whitespace-nowrap inline-flex items-center">
                                 Daftar Sekarang
                                 <div class="w-5 h-5 ml-2 flex items-center justify-center">
                                     <i class="ri-arrow-right-line"></i>
@@ -244,7 +232,7 @@ require_once '../head-nav-foo/navbar.php';
                             </p>
                             <a
                                 href="#daftar"
-                                class="bg-primary hover:bg-blue-600 text-white font-semibold py-3 px-8 !rounded-button whitespace-nowrap inline-flex items-center">
+                                class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-8 rounded-lg whitespace-nowrap inline-flex items-center">
                                 Daftar Sekarang
                                 <div class="w-5 h-5 ml-2 flex items-center justify-center">
                                     <i class="ri-arrow-right-line"></i>
@@ -261,7 +249,6 @@ require_once '../head-nav-foo/navbar.php';
             </div>
         </div>
     </section>
-    <!-- Syarat dan Ketentuan Section -->
     <section id="syarat" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
@@ -274,117 +261,114 @@ require_once '../head-nav-foo/navbar.php';
                 </p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Card 1 -->
                 <div
                     class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                     <div
-                        class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                        <i class="ri-user-line ri-lg text-primary"></i>
+                        class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-user-line ri-lg text-yellow-500"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3">Persyaratan Akademik</h3>
                     <ul class="space-y-3">
                         <li class="flex items-start">
                             <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
                                 <i class="ri-checkbox-circle-line"></i>
                             </div>
                             <span>Mahasiswa aktif minimal semester 3</span>
                         </li>
                         <li class="flex items-start">
                             <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
                                 <i class="ri-checkbox-circle-line"></i>
                             </div>
                             <span>IPK minimal 3.25</span>
                         </li>
                         <li class="flex items-start">
                             <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
                                 <i class="ri-checkbox-circle-line"></i>
                             </div>
                             <span>Nilai mata kuliah yang dilamar minimal A-</span>
                         </li>
                         <li class="flex items-start">
                             <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
                                 <i class="ri-checkbox-circle-line"></i>
                             </div>
                             <span>Tidak sedang mengambil cuti akademik</span>
                         </li>
                     </ul>
                 </div>
-                <!-- Card 2 -->
                 <div
                     class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                     <div
-                        class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                        <i class="ri-file-list-line ri-lg text-primary"></i>
+                        class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-file-list-line ri-lg text-yellow-500"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3">Dokumen Pendaftaran</h3>
                     <ul class="space-y-3">
                         <li class="flex items-start">
                             <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
                                 <i class="ri-checkbox-circle-line"></i>
                             </div>
                             <span>Transkrip nilai terbaru</span>
                         </li>
                         <li class="flex items-start">
                             <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
                                 <i class="ri-checkbox-circle-line"></i>
                             </div>
                             <span>CV akademik (format PDF)</span>
                         </li>
                         <li class="flex items-start">
                             <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
                                 <i class="ri-checkbox-circle-line"></i>
                             </div>
                             <span>Surat motivasi (maks. 500 kata)</span>
                         </li>
                         <li class="flex items-start">
                             <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
                                 <i class="ri-checkbox-circle-line"></i>
                             </div>
                             <span>Pas foto terbaru (3x4)</span>
                         </li>
                     </ul>
                 </div>
-                <!-- Card 3 -->
                 <div
                     class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                     <div
-                        class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                        <i class="ri-time-line ri-lg text-primary"></i>
+                        class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-time-line ri-lg text-yellow-500"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3">Komitmen Waktu</h3>
                     <ul class="space-y-3">
                         <li class="flex items-start">
                             <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
                                 <i class="ri-checkbox-circle-line"></i>
                             </div>
                             <span>Bersedia mengalokasikan 6-10 jam per minggu</span>
                         </li>
                         <li class="flex items-start">
                             <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
                                 <i class="ri-checkbox-circle-line"></i>
                             </div>
                             <span>Menghadiri pertemuan koordinasi mingguan</span>
                         </li>
                         <li class="flex items-start">
                             <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
                                 <i class="ri-checkbox-circle-line"></i>
                             </div>
                             <span>Berpartisipasi dalam sesi pelatihan awal</span>
                         </li>
                         <li class="flex items-start">
                             <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
                                 <i class="ri-checkbox-circle-line"></i>
                             </div>
                             <span>Tidak ada jadwal bentrok dengan jadwal mata kuliah</span>
@@ -393,7 +377,7 @@ require_once '../head-nav-foo/navbar.php';
                 </div>
             </div>
             <div class="mt-12 text-center">
-                <div class="inline-flex items-center text-primary">
+                <div class="inline-flex items-center text-yellow-500">
                     <div class="w-5 h-5 flex items-center justify-center mr-2">
                         <i class="ri-information-line"></i>
                     </div>
@@ -403,7 +387,6 @@ require_once '../head-nav-foo/navbar.php';
             </div>
         </div>
     </section>
-    <!-- Timeline Section -->
     <section id="timeline" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
@@ -417,12 +400,11 @@ require_once '../head-nav-foo/navbar.php';
             </div>
             <div class="relative timeline-container max-w-4xl mx-auto px-4 py-10">
                 <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
-                    <!-- Timeline Point 1 -->
                     <div class="timeline-point flex flex-col items-center">
                         <div
-                            class="w-16 h-16 bg-black rounded-full border-4 border-primary flex items-center justify-center mb-4">
+                            class="w-16 h-16 bg-black rounded-full border-4 border-yellow-500 flex items-center justify-center mb-4">
                             <div
-                                class="w-8 h-8 flex items-center justify-center text-primary">
+                                class="w-8 h-8 flex items-center justify-center text-yellow-500">
                                 <i class="ri-file-upload-line ri-lg"></i>
                             </div>
                         </div>
@@ -434,12 +416,11 @@ require_once '../head-nav-foo/navbar.php';
                             </p>
                         </div>
                     </div>
-                    <!-- Timeline Point 2 -->
                     <div class="timeline-point flex flex-col items-center">
                         <div
-                            class="w-16 h-16 bg-black rounded-full border-4 border-primary flex items-center justify-center mb-4">
+                            class="w-16 h-16 bg-black rounded-full border-4 border-yellow-500 flex items-center justify-center mb-4">
                             <div
-                                class="w-8 h-8 flex items-center justify-center text-primary">
+                                class="w-8 h-8 flex items-center justify-center text-yellow-500">
                                 <i class="ri-file-search-line ri-lg"></i>
                             </div>
                         </div>
@@ -451,12 +432,11 @@ require_once '../head-nav-foo/navbar.php';
                             </p>
                         </div>
                     </div>
-                    <!-- Timeline Point 3 -->
                     <div class="timeline-point flex flex-col items-center">
                         <div
-                            class="w-16 h-16 bg-black rounded-full border-4 border-primary flex items-center justify-center mb-4">
+                            class="w-16 h-16 bg-black rounded-full border-4 border-yellow-500 flex items-center justify-center mb-4">
                             <div
-                                class="w-8 h-8 flex items-center justify-center text-primary">
+                                class="w-8 h-8 flex items-center justify-center text-yellow-500">
                                 <i class="ri-edit-line ri-lg"></i>
                             </div>
                         </div>
@@ -468,12 +448,11 @@ require_once '../head-nav-foo/navbar.php';
                             </p>
                         </div>
                     </div>
-                    <!-- Timeline Point 4 -->
                     <div class="timeline-point flex flex-col items-center">
                         <div
-                            class="w-16 h-16 bg-black rounded-full border-4 border-primary flex items-center justify-center mb-4">
+                            class="w-16 h-16 bg-black rounded-full border-4 border-yellow-500 flex items-center justify-center mb-4">
                             <div
-                                class="w-8 h-8 flex items-center justify-center text-primary">
+                                class="w-8 h-8 flex items-center justify-center text-yellow-500">
                                 <i class="ri-user-voice-line ri-lg"></i>
                             </div>
                         </div>
@@ -485,12 +464,10 @@ require_once '../head-nav-foo/navbar.php';
                             </p>
                         </div>
                     </div>
-                    <!-- Timeline Point 5 -->
                     <div class="timeline-point flex flex-col items-center">
-                        <div
-                            class="w-16 h-16 bg-black rounded-full border-4 border-primary flex items-center justify-center mb-4">
+                        <div class="w-16 h-16 bg-black rounded-full border-4 border-yellow-500 flex items-center justify-center mb-4">
                             <div
-                                class="w-8 h-8 flex items-center justify-center text-primary">
+                                class="w-8 h-8 flex items-center justify-center text-yellow-500">
                                 <i class="ri-medal-line ri-lg"></i>
                             </div>
                         </div>
@@ -506,7 +483,7 @@ require_once '../head-nav-foo/navbar.php';
             </div>
             <div class="mt-12 text-center">
                 <div
-                    class="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-lg">
+                    class="inline-flex items-center bg-yellow-100 text-yellow-500 px-4 py-2 rounded-lg">
                     <div class="w-5 h-5 flex items-center justify-center mr-2">
                         <i class="ri-calendar-check-line"></i>
                     </div>
@@ -515,7 +492,6 @@ require_once '../head-nav-foo/navbar.php';
             </div>
         </div>
     </section>
-    <!-- Mata Kuliah Section -->
     <section id="matakuliah" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
@@ -527,7 +503,6 @@ require_once '../head-nav-foo/navbar.php';
                     dosen untuk semester Ganjil 2025
                 </p>
             </div>
-            <!-- Search and Filter -->
             <div class="mb-8 flex flex-col md:flex-row gap-4 justify-between">
                 <div class="relative w-full md:w-96">
                     <input
@@ -559,10 +534,8 @@ require_once '../head-nav-foo/navbar.php';
                     </div>
                 </div>
             </div>
-            <!-- Mata Kuliah Grid -->
             <div
                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                <!-- Mata Kuliah 1 -->
                 <div
                     class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
                     <div class="p-5">
@@ -570,8 +543,7 @@ require_once '../head-nav-foo/navbar.php';
                             <h3 class="text-lg font-semibold text-gray-900">
                                 Algoritma dan Pemrograman
                             </h3>
-                            <span
-                                class="bg-black text-primary text-xs px-2 py-1 rounded-full">IF-201</span>
+                            <span class="bg-black text-yellow-500 text-xs px-2 py-1 rounded-full">IF-201</span>
                         </div>
                         <p class="text-gray-600 text-sm mb-4">
                             Dasar-dasar algoritma dan implementasi dalam bahasa pemrograman
@@ -583,27 +555,25 @@ require_once '../head-nav-foo/navbar.php';
                                     <div
                                         class="w-24 h-2 bg-gray-200 rounded-full overflow-hidden">
                                         <div
-                                            class="h-full bg-primary rounded-full"
+                                            class="h-full bg-yellow-500 rounded-full"
                                             style="width: 40%"></div>
                                     </div>
                                     <span class="text-sm ml-2 text-gray-700">4/10</span>
                                 </div>
                             </div>
                             <button
-                                class="text-primary hover:text-blue-700 text-sm font-medium !rounded-button whitespace-nowrap">
+                                class="text-yellow-500 hover:text-yellow-700 text-sm font-medium rounded-lg whitespace-nowrap">
                                 Detail
                             </button>
                         </div>
                     </div>
                 </div>
-                <!-- Mata Kuliah 2 -->
                 <div
                     class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
                     <div class="p-5">
                         <div class="flex justify-between items-start mb-3">
                             <h3 class="text-lg font-semibold text-gray-900">Basis Data</h3>
-                            <span
-                                class="bg-black text-primary text-xs px-2 py-1 rounded-full">IF-304</span>
+                            <span class="bg-black text-yellow-500 text-xs px-2 py-1 rounded-full">IF-304</span>
                         </div>
                         <p class="text-gray-600 text-sm mb-4">
                             Konsep dan implementasi database relasional
@@ -615,20 +585,19 @@ require_once '../head-nav-foo/navbar.php';
                                     <div
                                         class="w-24 h-2 bg-gray-200 rounded-full overflow-hidden">
                                         <div
-                                            class="h-full bg-primary rounded-full"
+                                            class="h-full bg-yellow-500 rounded-full"
                                             style="width: 60%"></div>
                                     </div>
                                     <span class="text-sm ml-2 text-gray-700">6/10</span>
                                 </div>
                             </div>
                             <button
-                                class="text-primary hover:text-blue-700 text-sm font-medium !rounded-button whitespace-nowrap">
+                                class="text-yellow-500 hover:text-yellow-700 text-sm font-medium rounded-lg whitespace-nowrap">
                                 Detail
                             </button>
                         </div>
                     </div>
                 </div>
-                <!-- Mata Kuliah 3 -->
                 <div
                     class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
                     <div class="p-5">
@@ -636,8 +605,7 @@ require_once '../head-nav-foo/navbar.php';
                             <h3 class="text-lg font-semibold text-gray-900">
                                 Pemrograman Web
                             </h3>
-                            <span
-                                class="bg-black text-primary text-xs px-2 py-1 rounded-full">IF-305</span>
+                            <span class="bg-black text-yellow-500 text-xs px-2 py-1 rounded-full">IF-305</span>
                         </div>
                         <p class="text-gray-600 text-sm mb-4">
                             Pengembangan aplikasi berbasis web dengan HTML, CSS, dan
@@ -650,20 +618,19 @@ require_once '../head-nav-foo/navbar.php';
                                     <div
                                         class="w-24 h-2 bg-gray-200 rounded-full overflow-hidden">
                                         <div
-                                            class="h-full bg-primary rounded-full"
+                                            class="h-full bg-yellow-500 rounded-full"
                                             style="width: 30%"></div>
                                     </div>
                                     <span class="text-sm ml-2 text-gray-700">3/10</span>
                                 </div>
                             </div>
                             <button
-                                class="text-primary hover:text-blue-700 text-sm font-medium !rounded-button whitespace-nowrap">
+                                class="text-yellow-500 hover:text-yellow-700 text-sm font-medium rounded-lg whitespace-nowrap">
                                 Detail
                             </button>
                         </div>
                     </div>
                 </div>
-                <!-- Mata Kuliah 4 -->
                 <div
                     class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
                     <div class="p-5">
@@ -671,8 +638,7 @@ require_once '../head-nav-foo/navbar.php';
                             <h3 class="text-lg font-semibold text-gray-900">
                                 Jaringan Komputer
                             </h3>
-                            <span
-                                class="bg-black text-primary text-xs px-2 py-1 rounded-full">IF-306</span>
+                            <span class="bg-black text-yellow-500 text-xs px-2 py-1 rounded-full">IF-306</span>
                         </div>
                         <p class="text-gray-600 text-sm mb-4">
                             Konsep dan implementasi jaringan komputer
@@ -684,20 +650,19 @@ require_once '../head-nav-foo/navbar.php';
                                     <div
                                         class="w-24 h-2 bg-gray-200 rounded-full overflow-hidden">
                                         <div
-                                            class="h-full bg-primary rounded-full"
+                                            class="h-full bg-yellow-500 rounded-full"
                                             style="width: 50%"></div>
                                     </div>
                                     <span class="text-sm ml-2 text-gray-700">5/10</span>
                                 </div>
                             </div>
                             <button
-                                class="text-primary hover:text-blue-700 text-sm font-medium !rounded-button whitespace-nowrap">
+                                class="text-yellow-500 hover:text-yellow-700 text-sm font-medium rounded-lg whitespace-nowrap">
                                 Detail
                             </button>
                         </div>
                     </div>
                 </div>
-                <!-- Mata Kuliah 5 -->
                 <div
                     class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
                     <div class="p-5">
@@ -705,8 +670,7 @@ require_once '../head-nav-foo/navbar.php';
                             <h3 class="text-lg font-semibold text-gray-900">
                                 Sistem Operasi
                             </h3>
-                            <span
-                                class="bg-black text-primary text-xs px-2 py-1 rounded-full">IF-303</span>
+                            <span class="bg-black text-yellow-500 text-xs px-2 py-1 rounded-full">IF-303</span>
                         </div>
                         <p class="text-gray-600 text-sm mb-4">
                             Konsep dan implementasi sistem operasi
@@ -718,20 +682,19 @@ require_once '../head-nav-foo/navbar.php';
                                     <div
                                         class="w-24 h-2 bg-gray-200 rounded-full overflow-hidden">
                                         <div
-                                            class="h-full bg-primary rounded-full"
+                                            class="h-full bg-yellow-500 rounded-full"
                                             style="width: 70%"></div>
                                     </div>
                                     <span class="text-sm ml-2 text-gray-700">7/10</span>
                                 </div>
                             </div>
                             <button
-                                class="text-primary hover:text-blue-700 text-sm font-medium !rounded-button whitespace-nowrap">
+                                class="text-yellow-500 hover:text-yellow-700 text-sm font-medium rounded-lg whitespace-nowrap">
                                 Detail
                             </button>
                         </div>
                     </div>
                 </div>
-                <!-- Mata Kuliah 6 -->
                 <div
                     class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
                     <div class="p-5">
@@ -739,8 +702,7 @@ require_once '../head-nav-foo/navbar.php';
                             <h3 class="text-lg font-semibold text-gray-900">
                                 Kecerdasan Buatan
                             </h3>
-                            <span
-                                class="bg-black text-primary text-xs px-2 py-1 rounded-full">IF-401</span>
+                            <span class="bg-black text-yellow-500 text-xs px-2 py-1 rounded-full">IF-401</span>
                         </div>
                         <p class="text-gray-600 text-sm mb-4">
                             Dasar-dasar kecerdasan buatan dan machine learning
@@ -752,20 +714,19 @@ require_once '../head-nav-foo/navbar.php';
                                     <div
                                         class="w-24 h-2 bg-gray-200 rounded-full overflow-hidden">
                                         <div
-                                            class="h-full bg-primary rounded-full"
+                                            class="h-full bg-yellow-500 rounded-full"
                                             style="width: 20%"></div>
                                     </div>
                                     <span class="text-sm ml-2 text-gray-700">2/10</span>
                                 </div>
                             </div>
                             <button
-                                class="text-primary hover:text-blue-700 text-sm font-medium !rounded-button whitespace-nowrap">
+                                class="text-yellow-500 hover:text-yellow-700 text-sm font-medium rounded-lg whitespace-nowrap">
                                 Detail
                             </button>
                         </div>
                     </div>
                 </div>
-                <!-- Mata Kuliah 7 -->
                 <div
                     class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
                     <div class="p-5">
@@ -773,8 +734,7 @@ require_once '../head-nav-foo/navbar.php';
                             <h3 class="text-lg font-semibold text-gray-900">
                                 Analisis Algoritma
                             </h3>
-                            <span
-                                class="bg-black text-primary text-xs px-2 py-1 rounded-full">IF-302</span>
+                            <span class="bg-black text-yellow-500 text-xs px-2 py-1 rounded-full">IF-302</span>
                         </div>
                         <p class="text-gray-600 text-sm mb-4">
                             Analisis kompleksitas dan efisiensi algoritma
@@ -786,20 +746,19 @@ require_once '../head-nav-foo/navbar.php';
                                     <div
                                         class="w-24 h-2 bg-gray-200 rounded-full overflow-hidden">
                                         <div
-                                            class="h-full bg-primary rounded-full"
+                                            class="h-full bg-yellow-500 rounded-full"
                                             style="width: 40%"></div>
                                     </div>
                                     <span class="text-sm ml-2 text-gray-700">4/10</span>
                                 </div>
                             </div>
                             <button
-                                class="text-primary hover:text-blue-700 text-sm font-medium !rounded-button whitespace-nowrap">
+                                class="text-yellow-500 hover:text-yellow-700 text-sm font-medium rounded-lg whitespace-nowrap">
                                 Detail
                             </button>
                         </div>
                     </div>
                 </div>
-                <!-- Mata Kuliah 8 -->
                 <div
                     class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
                     <div class="p-5">
@@ -807,8 +766,7 @@ require_once '../head-nav-foo/navbar.php';
                             <h3 class="text-lg font-semibold text-gray-900">
                                 Pemrograman Mobile
                             </h3>
-                            <span
-                                class="bg-black text-primary text-xs px-2 py-1 rounded-full">IF-405</span>
+                            <span class="bg-black text-yellow-500 text-xs px-2 py-1 rounded-full">IF-405</span>
                         </div>
                         <p class="text-gray-600 text-sm mb-4">
                             Pengembangan aplikasi mobile untuk Android dan iOS
@@ -820,43 +778,42 @@ require_once '../head-nav-foo/navbar.php';
                                     <div
                                         class="w-24 h-2 bg-gray-200 rounded-full overflow-hidden">
                                         <div
-                                            class="h-full bg-primary rounded-full"
+                                            class="h-full bg-yellow-500 rounded-full"
                                             style="width: 30%"></div>
                                     </div>
                                     <span class="text-sm ml-2 text-gray-700">3/10</span>
                                 </div>
                             </div>
                             <button
-                                class="text-primary hover:text-blue-700 text-sm font-medium !rounded-button whitespace-nowrap">
+                                class="text-yellow-500 hover:text-yellow-700 text-sm font-medium rounded-lg whitespace-nowrap">
                                 Detail
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Pagination -->
             <div class="mt-10 flex justify-center">
                 <div class="inline-flex rounded-md shadow-sm">
                     <button
-                        class="px-3 py-2 border border-gray-300 bg-white text-gray-500 rounded-l-lg hover:bg-gray-50 !rounded-button whitespace-nowrap">
+                        class="px-3 py-2 border border-gray-300 bg-white text-gray-500 rounded-l-lg hover:bg-gray-50 rounded-lg whitespace-nowrap">
                         <div class="w-5 h-5 flex items-center justify-center">
                             <i class="ri-arrow-left-s-line"></i>
                         </div>
                     </button>
                     <button
-                        class="px-4 py-2 border-t border-b border-r border-gray-300 bg-primary text-black hover:bg-primary/90 !rounded-button whitespace-nowrap">
+                        class="px-4 py-2 border-t border-b border-r border-gray-300 bg-yellow-500 text-white hover:bg-yellow-400 rounded-lg whitespace-nowrap">
                         1
                     </button>
                     <button
-                        class="px-4 py-2 border-t border-b border-r border-gray-300 bg-white text-gray-700 hover:bg-gray-50 !rounded-button whitespace-nowrap">
+                        class="px-4 py-2 border-t border-b border-r border-gray-300 bg-white text-gray-700 hover:bg-gray-50 rounded-lg whitespace-nowrap">
                         2
                     </button>
                     <button
-                        class="px-4 py-2 border-t border-b border-r border-gray-300 bg-white text-gray-700 hover:bg-gray-50 !rounded-button whitespace-nowrap">
+                        class="px-4 py-2 border-t border-b border-r border-gray-300 bg-white text-gray-700 hover:bg-gray-50 rounded-lg whitespace-nowrap">
                         3
                     </button>
                     <button
-                        class="px-3 py-2 border-t border-b border-r border-gray-300 bg-white text-gray-500 rounded-r-lg hover:bg-gray-50 !rounded-button whitespace-nowrap">
+                        class="px-3 py-2 border-t border-b border-r border-gray-300 bg-white text-gray-500 rounded-r-lg hover:bg-gray-50 rounded-lg whitespace-nowrap">
                         <div class="w-5 h-5 flex items-center justify-center">
                             <i class="ri-arrow-right-s-line"></i>
                         </div>
@@ -865,7 +822,6 @@ require_once '../head-nav-foo/navbar.php';
             </div>
         </div>
     </section>
-    <!-- CTA Section -->
     <section id="daftar" class="py-20 bg-black text-white">
         <div class="container mx-auto px-4">
             <div class="max-w-3xl mx-auto text-center">
@@ -879,7 +835,7 @@ require_once '../head-nav-foo/navbar.php';
                 </p>
                 <a
                     href="#"
-                    class="inline-block bg-primary text-black font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 !rounded-button whitespace-nowrap">
+                    class="inline-block bg-yellow-500 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 whitespace-nowrap">
                     Daftar Sekarang
                 </a>
                 <p class="mt-6 text-sm opacity-80">
@@ -888,12 +844,11 @@ require_once '../head-nav-foo/navbar.php';
             </div>
         </div>
     </section>
-    <!-- Footer -->
     <footer id="kontak" class="bg-black text-white pt-16 pb-8">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
                 <div>
-                    <h3 class="text-xl font-['Pacifico'] mb-4">logo</h3>
+                    <img src="../../img/logo/bansus.png" class="w-12">
                     <p class="text-gray-400 mb-4">
                         Program rekrutmen asisten dosen untuk membantu proses pembelajaran
                         dan memberikan pengalaman berharga bagi mahasiswa.
@@ -901,22 +856,22 @@ require_once '../head-nav-foo/navbar.php';
                     <div class="flex space-x-4">
                         <a
                             href="#"
-                            class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-yellow-500 transition-colors">
                             <i class="ri-facebook-fill"></i>
                         </a>
                         <a
                             href="#"
-                            class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-yellow-500 transition-colors">
                             <i class="ri-twitter-fill"></i>
                         </a>
                         <a
                             href="#"
-                            class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-yellow-500 transition-colors">
                             <i class="ri-instagram-fill"></i>
                         </a>
                         <a
                             href="#"
-                            class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-yellow-500 transition-colors">
                             <i class="ri-youtube-fill"></i>
                         </a>
                     </div>
@@ -981,28 +936,28 @@ require_once '../head-nav-foo/navbar.php';
                     <ul class="space-y-3">
                         <li class="flex items-start">
                             <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
                                 <i class="ri-map-pin-line"></i>
                             </div>
                             <span class="text-gray-400">Gedung Fakultas Ilmu Komputer, Lantai 3, Ruang 3.01</span>
                         </li>
                         <li class="flex items-start">
                             <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
                                 <i class="ri-mail-line"></i>
                             </div>
                             <span class="text-gray-400">asdos@universitascontoh.ac.id</span>
                         </li>
                         <li class="flex items-start">
                             <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
                                 <i class="ri-phone-line"></i>
                             </div>
                             <span class="text-gray-400">(021) 1234-5678</span>
                         </li>
                         <li class="flex items-start">
                             <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-primary">
+                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
                                 <i class="ri-time-line"></i>
                             </div>
                             <span class="text-gray-400">Senin - Jumat: 08.00 - 16.00 WIB</span>
@@ -1018,7 +973,6 @@ require_once '../head-nav-foo/navbar.php';
             </div>
         </div>
     </footer>
-    <!-- Scripts -->
     <script id="slider-script">
         document.addEventListener("DOMContentLoaded", function() {
             const slider = document.querySelector(".slider");
@@ -1028,9 +982,7 @@ require_once '../head-nav-foo/navbar.php';
             const slideCount = slides.length;
 
             function goToSlide(index) {
-                slider.style.transform = translateX(-$ {
-                    index * 100
-                } % );
+                slider.style.transform = `translateX(-${index * 100}%)`;
                 // Update active dot
                 dots.forEach((dot) => dot.classList.remove("active"));
                 dots[index].classList.add("active");
@@ -1145,7 +1097,6 @@ require_once '../head-nav-foo/navbar.php';
             });
         });
     </script>
-     
 </body>
 
 </html>
