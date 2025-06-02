@@ -32,7 +32,7 @@
 
                 <form action="create_account.php" method="POST">
                     <div class="mb-4">
-                        <input type="password" id="password" name="password" placeholder="Masukkan Password Anda"
+                        <input type="email" id="email" name="email" placeholder="Masukkan Email Anda"
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
                     </div>
                     <div class="mb-6">
@@ -41,7 +41,7 @@
                     </div>
                     <button type="submit"
                         class="w-full bg-[#ffcc00] text-white font-bold py-3 px-4 rounded-lg hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50">
-                        Masuk
+                        Daftar
                     </button>
                 </form>
 
