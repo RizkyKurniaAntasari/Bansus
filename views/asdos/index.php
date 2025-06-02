@@ -185,7 +185,7 @@ require_once '../head-nav-foo/navbar.php';
                                 akademik Anda bersama kami
                             </p>
                             <a
-                                href="#daftar"
+                                href="daftar_asdos.php"
                                 class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-8 rounded-lg whitespace-nowrap inline-flex items-center">
                                 Daftar Sekarang
                                 <div class="w-5 h-5 ml-2 flex items-center justify-center">
@@ -834,7 +834,7 @@ require_once '../head-nav-foo/navbar.php';
                     asisten dosen semester Ganjil 2025!
                 </p>
                 <a
-                    href="#"
+                    href="daftar_asdos.php"
                     class="inline-block bg-yellow-500 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 whitespace-nowrap">
                     Daftar Sekarang
                 </a>
