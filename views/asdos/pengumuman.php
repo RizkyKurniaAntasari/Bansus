@@ -22,32 +22,32 @@ require_once '../head-nav-foo/navbar.php';
         $jadwal = [
             'Semester 1' => [
                 'Pengantar Ilmu Komputer' => [
-                    ['npm' => '2310110001', 'nama' => 'Ali Akbar'],
-                    ['npm' => '2310110002', 'nama' => 'Budi Santoso'],
+                    ['npm' => '2310110001', 'nama' => 'Ali Akbar', 'Keterangan' => 'Koordinator', 'kelas' => 'A'],
+                    ['npm' => '2310110002', 'nama' => 'Budi Santoso', 'Keterangan' => 'Anggota', 'kelas' => 'B'],
                 ],
                 'Logika Matematika' => [
-                    ['npm' => '2310110003', 'nama' => 'Citra Lestari'],
-                    ['npm' => '2310110004', 'nama' => 'Dewi Ayu'],
+                    ['npm' => '2310110003', 'nama' => 'Citra Lestari', 'Keterangan' => 'Koordinator', 'kelas' => 'C'],
+                    ['npm' => '2310110004', 'nama' => 'Dewi Ayu', 'Keterangan' => 'Anggota', 'kelas' => 'D'],
                 ],
             ],
             'Semester 3' => [
                 'Struktur Data' => [
-                    ['npm' => '2310110005', 'nama' => 'Eka Putra'],
-                    ['npm' => '2310110006', 'nama' => 'Fajar Pratama'],
+                    ['npm' => '2310110005', 'nama' => 'Eka Putra', 'Keterangan' => 'Koordinator', 'kelas' => 'A'],
+                    ['npm' => '2310110006', 'nama' => 'Fajar Pratama', 'Keterangan' => 'Anggota', 'kelas' => 'C'],
                 ],
                 'Basis Data' => [
-                    ['npm' => '2310110007', 'nama' => 'Gina Rahma'],
-                    ['npm' => '2310110008', 'nama' => 'Hadi Saputra'],
+                    ['npm' => '2310110007', 'nama' => 'Gina Rahma', 'Keterangan' => 'Koordinator', 'kelas' => 'B'],
+                    ['npm' => '2310110008', 'nama' => 'Hadi Saputra', 'Keterangan' => 'Anggota', 'kelas' => 'D'],
                 ],
             ],
             'Semester 5' => [
                 'Kecerdasan Buatan' => [
-                    ['npm' => '2310110009', 'nama' => 'Indah Meilani'],
-                    ['npm' => '2310110010', 'nama' => 'Joko Setiawan'],
+                    ['npm' => '2310110009', 'nama' => 'Indah Meilani', 'Keterangan' => 'Koordinator', 'kelas' => 'A'],
+                    ['npm' => '2310110010', 'nama' => 'Joko Setiawan', 'Keterangan' => 'Anggota', 'kelas' => 'B'],
                 ],
                 'Rekayasa Perangkat Lunak' => [
-                    ['npm' => '2310110011', 'nama' => 'Kiki Ardian'],
-                    ['npm' => '2310110012', 'nama' => 'Laras Sari'],
+                    ['npm' => '2310110011', 'nama' => 'Kiki Ardian', 'Keterangan' => 'Koordinator', 'kelas' => 'C'],
+                    ['npm' => '2310110012', 'nama' => 'Laras Sari', 'Keterangan' => 'Anggota', 'kelas' => 'D'],
                 ],
             ],
         ];
@@ -66,6 +66,8 @@ require_once '../head-nav-foo/navbar.php';
                 echo "<tr>
                         <th class='text-left px-4 py-2 border-b border-gray-300'>NPM</th>
                         <th class='text-left px-4 py-2 border-b border-gray-300'>Nama</th>
+                        <th class='text-left px-4 py-2 border-b border-gray-300'>PJ Kelas</th>
+                        <th class='text-left px-4 py-2 border-b border-gray-300'>Keterangan</th>
                       </tr>";
                 echo "</thead><tbody>";
 
@@ -73,6 +75,8 @@ require_once '../head-nav-foo/navbar.php';
                     echo "<tr class='hover:bg-gray-50'>
                             <td class='px-4 py-2 border-b border-gray-200'>{$mhs['npm']}</td>
                             <td class='px-4 py-2 border-b border-gray-200'>{$mhs['nama']}</td>
+                            <td class='px-4 py-2 border-b border-gray-200'>{$mhs['kelas']}</td>
+                            <td class='px-4 py-2 border-b border-gray-200'>{$mhs['Keterangan']}</td>
                           </tr>";
                 }
 
