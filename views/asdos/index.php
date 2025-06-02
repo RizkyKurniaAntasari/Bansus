@@ -886,22 +886,22 @@ require_once '../head-nav-foo/navbar.php';
                         </li>
                         <li>
                             <a
-                                href="#daftar-asdos"
+                                href="daftar_asdos.php"
                                 class="text-gray-400 hover:text-white transition-colors">Daftar Asdos</a>
                         </li>
                         <li>
                             <a
-                                href="#jadwal-wawancara"
+                                href="jadwal_wawancara.php"
                                 class="text-gray-400 hover:text-white transition-colors">Jadwal Wawancara</a>
                         </li>
                         <li>
                             <a
-                                href="#pengumuman"
+                                href="pengumuman.php"
                                 class="text-gray-400 hover:text-white transition-colors">Pengumuman</a>
                         </li>
                         <li>
                             <a
-                                href="#kontak"
+                                href="kontak_kami.php"
                                 class="text-gray-400 hover:text-white transition-colors">Kontak Kami</a>
                         </li>
                     </ul>
