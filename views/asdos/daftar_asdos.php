@@ -15,7 +15,7 @@ require_once '../head-nav-foo/navbar.php';
 <body class="Poppins">
     <section class="p-8 max-w-4xl mx-auto bg-white shadow-md rounded-md mt-6">
         <h2 class="text-2xl font-bold text-[#ffcc00] mb-4">Form Pendaftaran Asisten Dosen</h2>
-        <form action="#" method="POST" enctype="multipart/form-data" class="space-y-4">
+        <form action="#" method="POST" enctype="multipart/form-data" class="space-y-4" autocomplete="off">
 
             <!-- Nama Lengkap -->
             <div>
