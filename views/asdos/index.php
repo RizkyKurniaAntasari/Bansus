@@ -204,7 +204,7 @@ require_once '../head-nav-foo/navbar.php';
                                 skill dan hard skill Anda
                             </p>
                             <a
-                                href="#daftar"
+                                href="daftar_asdos.php"
                                 class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-8 rounded-lg whitespace-nowrap inline-flex items-center">
                                 Daftar Sekarang
                                 <div class="w-5 h-5 ml-2 flex items-center justify-center">
@@ -225,7 +225,7 @@ require_once '../head-nav-foo/navbar.php';
                                 mahasiswa lain untuk berkembang
                             </p>
                             <a
-                                href="#daftar"
+                                href="daftar_asdos.php"
                                 class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-8 rounded-lg whitespace-nowrap inline-flex items-center">
                                 Daftar Sekarang
                                 <div class="w-5 h-5 ml-2 flex items-center justify-center">
@@ -246,7 +246,7 @@ require_once '../head-nav-foo/navbar.php';
                                 mahasiswa lain untuk berkembang
                             </p>
                             <a
-                                href="#daftar"
+                                href="daftar_asdos.php"
                                 class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-8 rounded-lg whitespace-nowrap inline-flex items-center">
                                 Daftar Sekarang
                                 <div class="w-5 h-5 ml-2 flex items-center justify-center">
@@ -267,7 +267,7 @@ require_once '../head-nav-foo/navbar.php';
                                 mahasiswa lain untuk berkembang
                             </p>
                             <a
-                                href="#daftar"
+                                href="daftar_asdos.php"
                                 class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-8 rounded-lg whitespace-nowrap inline-flex items-center">
                                 Daftar Sekarang
                                 <div class="w-5 h-5 ml-2 flex items-center justify-center">
@@ -572,15 +572,12 @@ require_once '../head-nav-foo/navbar.php';
                     </div>
                 </div>
             </div>
-            <div
-                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 <div
                     class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
                     <div class="p-5">
                         <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-lg font-semibold text-gray-900">
-                                Algoritma dan Pemrograman
-                            </h3>
+                            <h3 class="text-lg font-semibold text-gray-900">Pemrograman Website</h3>
                             <span class="bg-black text-yellow-500 text-xs px-2 py-1 rounded-full">IF-201</span>
                         </div>
                         <p class="text-gray-600 text-sm mb-4">
@@ -872,7 +869,7 @@ require_once '../head-nav-foo/navbar.php';
                     asisten dosen semester Ganjil 2025!
                 </p>
                 <a
-                    href="daftar_asdos.php"
+                    href="#beranda"
                     class="inline-block bg-yellow-500 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 whitespace-nowrap">
                     Daftar Sekarang
                 </a>
