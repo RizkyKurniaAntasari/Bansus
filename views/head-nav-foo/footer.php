@@ -1,5 +1,5 @@
 <script src="https://cdn.tailwindcss.com"></script>
-    <footer id="kontak" class="bg-black text-white pt-16 pb-8">
+    <footer id="kontak" class="bg-black text-white pt-16 pb-4">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
                 <div>
@@ -31,28 +31,23 @@
                     <h4 class="text-lg font-semibold mb-4">Tautan Cepat</h4>
                     <ul class="space-y-2">
                         <li>
-                            <a
-                                href="#beranda"
+                            <a href="#beranda"
                                 class="text-gray-400 hover:text-white transition-colors">Beranda</a>
                         </li>
                         <li>
-                            <a
-                                href="daftar_asdos.php"
+                            <a href="daftar_asdos.php"
                                 class="text-gray-400 hover:text-white transition-colors">Daftar Asdos</a>
                         </li>
                         <li>
-                            <a
-                                href="jadwal_wawancara.php"
+                            <a href="jadwal_wawancara.php"
                                 class="text-gray-400 hover:text-white transition-colors">Jadwal Wawancara</a>
                         </li>
                         <li>
-                            <a
-                                href="pengumuman.php"
+                            <a href="pengumuman.php"
                                 class="text-gray-400 hover:text-white transition-colors">Pengumuman</a>
                         </li>
                         <li>
-                            <a
-                                href="kontak_kami.php"
+                            <a href="kontak_kami.php"
                                 class="text-gray-400 hover:text-white transition-colors">Kontak Kami</a>
                         </li>
                     </ul>
@@ -61,24 +56,20 @@
                     <h4 class="text-lg font-semibold mb-4">Informasi</h4>
                     <ul class="space-y-2">
                         <li>
-                            <a
-                                href="#"
+                            <a href="#"
                                 class="text-gray-400 hover:text-white transition-colors">FAQ</a>
                         </li>
                         <li>
-                            <a
-                                href="#timeline"
+                            <a href="#syarat"
+                            class="text-gray-400 hover:text-white transition-colors">Syarat & Ketentuan</a>
+                        </li>
+                        <li>
+                            <a href="#timeline"
                                 class="text-gray-400 hover:text-white transition-colors">Timeline Pendaftaran</a>
                         </li>
                         <li>
-                            <a
-                                href="#matakuliah"
+                            <a href="#matakuliah"
                                 class="text-gray-400 hover:text-white transition-colors">Daftar Mata Kuliah</a>
-                        </li>
-                        <li>
-                            <a
-                                href="#syarat"
-                                class="text-gray-400 hover:text-white transition-colors">Syarat & Ketentuan</a>
                         </li>
                     </ul>
                 </div>
@@ -117,7 +108,7 @@
                 </div>
             </div>
             <div
-                class="pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+                class="pt-4 border-t border-gray-800 text-center text-gray-500 text-sm">
                 <p>
                     &copy; 2025 Open Recruitment Asisten Dosen. Hak Cipta Dilindungi.
                 </p>

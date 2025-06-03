@@ -3,6 +3,53 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 require_once '../head-nav-foo/header.php';
 require_once '../head-nav-foo/navbar.php';
 ?>
+<!-- Data Matkul -->
+<?php
+            $matkul = [
+                [
+                    'nama' => 'Pemrograman Website',
+                    'kode' => 'IF-201',
+                    'kuota' => 10
+                ],
+                [
+                    'nama' => 'Basis Data',
+                    'kode' => 'IF-304',
+                    'kuota' => 8
+                ],
+                [
+                    'nama' => 'Pemrograman Web',
+                    'kode' => 'IF-305',
+                    'kuota' => 6
+                ],
+                [
+                    'nama' => 'Jaringan Komputer',
+                    'kode' => 'IF-306',
+                    'kuota' => 8
+                ],
+                [
+                    'nama' => 'Sistem Operasi',
+                    'kode' => 'IF-303',
+                    'kuota' => 8
+                ],
+                [
+                    'nama' => 'Kecerdasan Buatan',
+                    'kode' => 'IF-401',
+                    'kuota' => 6
+                ],
+                [
+                    'nama' => 'Analisis Algoritma',
+                    'kode' => 'IF-302',
+                    'kuota' => 2
+                ],
+                [
+                    'nama' => 'Pemrograman Mobile',
+                    'kode' => 'IF-405',
+                    'deskripsi' => 'Teori dan Aplikasi Mobile',
+                    'kuota' => 2
+                ],
+            ];
+            ?>
+
 <!DOCTYPE html>
 <html lang="id">
 <html class="scroll-smooth">
@@ -257,7 +304,7 @@ require_once '../head-nav-foo/navbar.php';
         </div>
     </section>
     <section class="py-20 bg-gray-50">
-        <div id="syarat"  class="container mx-auto px-4 scroll-mt-8">
+        <div id="syarat" class="container mx-auto px-4 scroll-mt-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">
                     Syarat dan Ketentuan
@@ -501,7 +548,7 @@ require_once '../head-nav-foo/navbar.php';
         </div>
     </section>
     <section class="py-20 bg-gray-50">
-        <div id="matakuliah" class="container mx-auto px-4 scroll-mt-3">
+        <div id="matakuliah" class="container mx-auto px-4 scroll-mt-10">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">
                     Daftar Mata Kuliah
@@ -525,261 +572,42 @@ require_once '../head-nav-foo/navbar.php';
                 </div>
                 <div class="flex flex-wrap gap-3">
                     <div class="flex items-center gap-2">
-                        <input type="checkbox" id="filter-all" checked />
-                        <label for="filter-all" class="text-sm text-gray-700">Semua</label>
+                        <input type="checkbox" id="filter_all" checked />
+                        <label for="filter_all" class="text-sm text-gray-700">Semua</label>
                     </div>
                     <div class="flex items-center gap-2">
-                        <input type="checkbox" id="filter-informatika" />
-                        <label for="filter-informatika" class="text-sm text-gray-700">Informatika</label>
+                        <input type="checkbox" id="filter_ilmukomputer" />
+                        <label for="filter_ilmukomputer" class="text-sm text-gray-700">Ilmu Komputer</label>
                     </div>
                     <div class="flex items-center gap-2">
-                        <input type="checkbox" id="filter-sistem-informasi" />
-                        <label for="filter-sistem-informasi" class="text-sm text-gray-700">Sistem Informasi</label>
+                        <input type="checkbox" id="filter_sistem_informasi" />
+                        <label for="filter_sistem_informasi" class="text-sm text-gray-700">Sistem Informasi</label>
                     </div>
                     <div class="flex items-center gap-2">
-                        <input type="checkbox" id="filter-teknik-komputer" />
-                        <label for="filter-teknik-komputer" class="text-sm text-gray-700">Teknik Komputer</label>
+                        <input type="checkbox" id="filter_manajemeninformasir" />
+                        <label for="filter_manajemeninformasir" class="text-sm text-gray-700">D3 Manajemen Informasi</label>
                     </div>
                 </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-                    <div class="p-5">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-lg font-semibold text-gray-900">Pemrograman Website</h3>
-                            <span class="bg-black text-yellow-500 text-xs px-2 py-1 rounded-full">IF-201</span>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-4">
-                            Kuota: 8 Orang
-                        </p>
-                        <div class="flex justify-between items-center">
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-                    <div class="p-5">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-lg font-semibold text-gray-900">Basis Data</h3>
-                            <span class="bg-black text-yellow-500 text-xs px-2 py-1 rounded-full">IF-304</span>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-4">
-                            Konsep dan implementasi database relasional
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <p class="text-xs text-gray-500">Kuota Tersedia</p>
-                                <div class="flex items-center mt-1">
-                                    <div
-                                        class="w-24 h-2 bg-gray-200 rounded-full overflow-hidden">
-                                        <div
-                                            class="h-full bg-yellow-500 rounded-full"
-                                            style="width: 60%"></div>
-                                    </div>
-                                    <span class="text-sm ml-2 text-gray-700">6/10</span>
-                                </div>
+                <?php foreach ($matkul as $m):
+
+                ?>
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="p-5">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-lg font-semibold text-gray-900"><?= htmlspecialchars($m['nama']) ?></h3>
+                                <span class="bg-black text-yellow-500 text-xs px-2 py-1 rounded-full"><?= htmlspecialchars($m['kode']) ?></span>
                             </div>
-                            <button
-                                class="text-yellow-500 hover:text-yellow-700 text-sm font-medium rounded-lg whitespace-nowrap">
-                                Detail
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-                    <div class="p-5">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-lg font-semibold text-gray-900">
-                                Pemrograman Web
-                            </h3>
-                            <span class="bg-black text-yellow-500 text-xs px-2 py-1 rounded-full">IF-305</span>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-4">
-                            Pengembangan aplikasi berbasis web dengan HTML, CSS, dan
-                            JavaScript
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <p class="text-xs text-gray-500">Kuota Tersedia</p>
-                                <div class="flex items-center mt-1">
-                                    <div
-                                        class="w-24 h-2 bg-gray-200 rounded-full overflow-hidden">
-                                        <div
-                                            class="h-full bg-yellow-500 rounded-full"
-                                            style="width: 30%"></div>
-                                    </div>
-                                    <span class="text-sm ml-2 text-gray-700">3/10</span>
-                                </div>
+
+                            <div class="flex justify-between items-center">
+                                <p class="text-xs text-gray-500">Kuota Tersedia <?= $m['kuota'] ?></p>
                             </div>
-                            <button
-                                class="text-yellow-500 hover:text-yellow-700 text-sm font-medium rounded-lg whitespace-nowrap">
-                                Detail
-                            </button>
                         </div>
                     </div>
-                </div>
-                <div
-                    class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-                    <div class="p-5">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-lg font-semibold text-gray-900">
-                                Jaringan Komputer
-                            </h3>
-                            <span class="bg-black text-yellow-500 text-xs px-2 py-1 rounded-full">IF-306</span>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-4">
-                            Konsep dan implementasi jaringan komputer
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <p class="text-xs text-gray-500">Kuota Tersedia</p>
-                                <div class="flex items-center mt-1">
-                                    <div
-                                        class="w-24 h-2 bg-gray-200 rounded-full overflow-hidden">
-                                        <div
-                                            class="h-full bg-yellow-500 rounded-full"
-                                            style="width: 50%"></div>
-                                    </div>
-                                    <span class="text-sm ml-2 text-gray-700">5/10</span>
-                                </div>
-                            </div>
-                            <button
-                                class="text-yellow-500 hover:text-yellow-700 text-sm font-medium rounded-lg whitespace-nowrap">
-                                Detail
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-                    <div class="p-5">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-lg font-semibold text-gray-900">
-                                Sistem Operasi
-                            </h3>
-                            <span class="bg-black text-yellow-500 text-xs px-2 py-1 rounded-full">IF-303</span>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-4">
-                            Konsep dan implementasi sistem operasi
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <p class="text-xs text-gray-500">Kuota Tersedia</p>
-                                <div class="flex items-center mt-1">
-                                    <div
-                                        class="w-24 h-2 bg-gray-200 rounded-full overflow-hidden">
-                                        <div
-                                            class="h-full bg-yellow-500 rounded-full"
-                                            style="width: 70%"></div>
-                                    </div>
-                                    <span class="text-sm ml-2 text-gray-700">7/10</span>
-                                </div>
-                            </div>
-                            <button
-                                class="text-yellow-500 hover:text-yellow-700 text-sm font-medium rounded-lg whitespace-nowrap">
-                                Detail
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-                    <div class="p-5">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-lg font-semibold text-gray-900">
-                                Kecerdasan Buatan
-                            </h3>
-                            <span class="bg-black text-yellow-500 text-xs px-2 py-1 rounded-full">IF-401</span>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-4">
-                            Dasar-dasar kecerdasan buatan dan machine learning
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <p class="text-xs text-gray-500">Kuota Tersedia</p>
-                                <div class="flex items-center mt-1">
-                                    <div
-                                        class="w-24 h-2 bg-gray-200 rounded-full overflow-hidden">
-                                        <div
-                                            class="h-full bg-yellow-500 rounded-full"
-                                            style="width: 20%"></div>
-                                    </div>
-                                    <span class="text-sm ml-2 text-gray-700">2/10</span>
-                                </div>
-                            </div>
-                            <button
-                                class="text-yellow-500 hover:text-yellow-700 text-sm font-medium rounded-lg whitespace-nowrap">
-                                Detail
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-                    <div class="p-5">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-lg font-semibold text-gray-900">
-                                Analisis Algoritma
-                            </h3>
-                            <span class="bg-black text-yellow-500 text-xs px-2 py-1 rounded-full">IF-302</span>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-4">
-                            Analisis kompleksitas dan efisiensi algoritma
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <p class="text-xs text-gray-500">Kuota Tersedia</p>
-                                <div class="flex items-center mt-1">
-                                    <div
-                                        class="w-24 h-2 bg-gray-200 rounded-full overflow-hidden">
-                                        <div
-                                            class="h-full bg-yellow-500 rounded-full"
-                                            style="width: 40%"></div>
-                                    </div>
-                                    <span class="text-sm ml-2 text-gray-700">4/10</span>
-                                </div>
-                            </div>
-                            <button
-                                class="text-yellow-500 hover:text-yellow-700 text-sm font-medium rounded-lg whitespace-nowrap">
-                                Detail
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-                    <div class="p-5">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-lg font-semibold text-gray-900">
-                                Pemrograman Mobile
-                            </h3>
-                            <span class="bg-black text-yellow-500 text-xs px-2 py-1 rounded-full">IF-405</span>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-4">
-                            Pengembangan aplikasi mobile untuk Android dan iOS
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <p class="text-xs text-gray-500">Kuota Tersedia</p>
-                                <div class="flex items-center mt-1">
-                                    <div
-                                        class="w-24 h-2 bg-gray-200 rounded-full overflow-hidden">
-                                        <div
-                                            class="h-full bg-yellow-500 rounded-full"
-                                            style="width: 30%"></div>
-                                    </div>
-                                    <span class="text-sm ml-2 text-gray-700">3/10</span>
-                                </div>
-                            </div>
-                            <button
-                                class="text-yellow-500 hover:text-yellow-700 text-sm font-medium rounded-lg whitespace-nowrap">
-                                Detail
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
+
             <div class="mt-10 flex justify-center">
                 <div class="inline-flex rounded-md shadow-sm">
                     <button
@@ -876,13 +704,13 @@ require_once '../head-nav-foo/navbar.php';
     <script id="search-filter-script">
         document.addEventListener("DOMContentLoaded", function() {
             const searchInput = document.getElementById("search-matkul");
-            const filterAll = document.getElementById("filter-all");
-            const filterInformatika = document.getElementById("filter-informatika");
+            const filterAll = document.getElementById("filter_all");
+            const filterInformatika = document.getElementById("filter_ilmukomputer");
             const filterSistemInformasi = document.getElementById(
-                "filter-sistem-informasi",
+                "filter_sistem_informasi",
             );
             const filterTeknikKomputer = document.getElementById(
-                "filter-teknik-komputer",
+                "filter_manajemeninformasir",
             );
             // Filter functionality would go here in a real application
             // This is just a placeholder for demonstration
