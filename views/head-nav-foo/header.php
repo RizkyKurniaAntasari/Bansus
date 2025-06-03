@@ -18,10 +18,10 @@
         </div>
 
         <div class="flex items-center space-x-4 text-black text-lg">
-            <a href="https://www.instagram.com/himakomunila?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="#" title="X"><i class="fab fa-x-twitter"></i></a>
-            <a href="#" title="TikTok"><i class="fab fa-tiktok mr-5"></i></a>
+            <a href="https://www.instagram.com/himakomunila?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com/@himakommedia?feature=shared" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://x.com/himakomunila?t=1bG8DiT8s-NXp2TKGOjI_A&s=09"target="_blank" title="X"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.tiktok.com/@himakomunila?_t=ZS-8wt2Q3AqynQ&_r=1" target="_blank" title="TikTok"><i class="fab fa-tiktok mr-5"></i></a>
             <img src="../../img/user.jpg" alt="Profil" class="w-9 h-9 rounded-full ring-2 ring-black hover:ring-white" />
         </div>
     </div>

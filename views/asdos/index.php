@@ -172,9 +172,7 @@ require_once '../head-nav-foo/navbar.php';
     <section id="beranda" class="">
         <div class="slider-container">
             <div class="slider">
-                <div
-                    class="slide"
-                    style="background-image: url('https://readdy.ai/api/search-image?query=university%20students%20collaborating%20in%20a%20modern%20classroom%2C%20teaching%20assistants%20helping%20other%20students%2C%20academic%20environment%2C%20bright%20and%20airy%20space%20with%20natural%20lighting%2C%20students%20discussing%20academic%20materials&width=1280&height=600&seq=1&orientation=landscape')">
+                <div class="slide" style="background-image: url('../../img/FOTO/DSC_1801.JPG')">
                     <div class="slide-overlay">
                         <div class="slide-content">
                             <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -195,9 +193,7 @@ require_once '../head-nav-foo/navbar.php';
                         </div>
                     </div>
                 </div>
-                <div
-                    class="slide"
-                    style="background-image: url('https://readdy.ai/api/search-image?query=teaching%20assistant%20explaining%20concepts%20to%20a%20group%20of%20university%20students%2C%20collaborative%20learning%20environment%2C%20academic%20setting%20with%20computers%20and%20educational%20materials%2C%20bright%20classroom%20with%20modern%20facilities&width=1280&height=600&seq=2&orientation=landscape')">
+                <div class="slide" style="background-image: url('../../img/FOTO/IMG_6726.JPG')">
                     <div class="slide-overlay">
                         <div class="slide-content">
                             <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -218,9 +214,49 @@ require_once '../head-nav-foo/navbar.php';
                         </div>
                     </div>
                 </div>
-                <div
-                    class="slide"
-                    style="background-image: url('https://readdy.ai/api/search-image?query=university%20teaching%20assistants%20conducting%20a%20workshop%2C%20students%20engaged%20in%20learning%2C%20academic%20discussion%20in%20a%20modern%20university%20setting%2C%20bright%20and%20professional%20environment%20with%20educational%20tools&width=1280&height=600&seq=3&orientation=landscape')">
+                <div class="slide" style="background-image: url('../../img/FOTO/DSCF9427.JPG')">
+                    <div class="slide-overlay">
+                        <div class="slide-content">
+                            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                                Berbagi Pengetahuan, Tumbuh Bersama
+                            </h1>
+                            <p class="text-white text-lg mb-8">
+                                Bergabunglah dengan komunitas asisten dosen dan bantu
+                                mahasiswa lain untuk berkembang
+                            </p>
+                            <a
+                                href="#daftar"
+                                class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-8 rounded-lg whitespace-nowrap inline-flex items-center">
+                                Daftar Sekarang
+                                <div class="w-5 h-5 ml-2 flex items-center justify-center">
+                                    <i class="ri-arrow-right-line"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('../../img/FOTO/IMG_0286.JPG')">
+                    <div class="slide-overlay">
+                        <div class="slide-content">
+                            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                                Berbagi Pengetahuan, Tumbuh Bersama
+                            </h1>
+                            <p class="text-white text-lg mb-8">
+                                Bergabunglah dengan komunitas asisten dosen dan bantu
+                                mahasiswa lain untuk berkembang
+                            </p>
+                            <a
+                                href="#daftar"
+                                class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-8 rounded-lg whitespace-nowrap inline-flex items-center">
+                                Daftar Sekarang
+                                <div class="w-5 h-5 ml-2 flex items-center justify-center">
+                                    <i class="ri-arrow-right-line"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('../../img/FOTO/IMG_5465.JPG')">
                     <div class="slide-overlay">
                         <div class="slide-content">
                             <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -244,6 +280,8 @@ require_once '../head-nav-foo/navbar.php';
             </div>
             <div class="slider-nav">
                 <div class="slider-dot active"></div>
+                <div class="slider-dot"></div>
+                <div class="slider-dot"></div>
                 <div class="slider-dot"></div>
                 <div class="slider-dot"></div>
             </div>
