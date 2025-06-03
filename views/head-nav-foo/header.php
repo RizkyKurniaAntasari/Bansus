@@ -18,7 +18,7 @@
         </div>
 
         <div class="flex items-center space-x-4 text-black text-lg">
-            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/himakomunila?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank title="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
             <a href="#" title="X"><i class="fab fa-x-twitter"></i></a>
             <a href="#" title="TikTok"><i class="fab fa-tiktok mr-5"></i></a>

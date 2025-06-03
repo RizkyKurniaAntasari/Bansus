@@ -94,7 +94,7 @@ require_once '../head-nav-foo/navbar.php';
                 </select>
             </div>
 
-            <!-- PENGALAMAN JADI ASDOS -->
+            <!-- KEBERSEDIAAN BUKAN PRIORITAS -->
             <div>
                 <label class="block font-bold mb-1">Apakah Anda bersedia ditempatkan pada mata kuliah selain yang dipilih</label>
                 <select name="kebersediaan" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#ffcc00]">
@@ -104,9 +104,9 @@ require_once '../head-nav-foo/navbar.php';
                 </select>
             </div>
 
-            <!-- Upload CV (Opsional) -->
+            <!-- Upload Surat Pernyataan -->
             <div>
-                <label class="block font-bold mb-1">Upload Surat Pernyataan <a class="text-underline underline underline-offset-4 text-blue-600" href="https://docs.google.com/document/d/13sA5RUgaHtU7RrfY6cQAReyO4-tckxa7/edit?usp=sharing&ouid=109242753190899151626&rtpof=true&sd=true" target="_blank">(Unduh disini)</a></label>
+                <label class="block font-bold mb-1">Upload Surat Pernyataan<a class="text-underline underline underline-offset-4 text-blue-600" href="https://docs.google.com/document/d/13sA5RUgaHtU7RrfY6cQAReyO4-tckxa7/edit?usp=sharing&ouid=109242753190899151626&rtpof=true&sd=true" target="_blank">(Unduh disini)</a></label>
                 <input type="file" name="cv" accept=".pdf,.doc,.docx" class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#ffcc00]">
             </div>
 

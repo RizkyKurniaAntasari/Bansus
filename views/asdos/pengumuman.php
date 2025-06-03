@@ -63,16 +63,16 @@ require_once '../head-nav-foo/navbar.php';
                 echo "<div class='p-4 overflow-x-auto'>";
                 echo "<table class='min-w-full border border-gray-200 text-sm'>";
                 echo "<thead class='bg-gray-100'>";
-                echo "<tr>
-                        <th class='text-left px-4 py-2 border-b border-gray-300'>NPM</th>
-                        <th class='text-left px-4 py-2 border-b border-gray-300'>Nama</th>
-                        <th class='text-left px-4 py-2 border-b border-gray-300'>PJ Kelas</th>
-                        <th class='text-left px-4 py-2 border-b border-gray-300'>Keterangan</th>
+                echo "<tr class='text-center'>
+                        <th class='px-4 py-2 border-b border-gray-300'>NPM</th>
+                        <th class='px-4 py-2 border-b border-gray-300'>Nama</th>
+                        <th class='px-4 py-2 border-b border-gray-300'>PJ Kelas</th>
+                        <th class='px-4 py-2 border-b border-gray-300'>Keterangan</th>
                       </tr>";
                 echo "</thead><tbody>";
 
                 foreach ($mahasiswa as $mhs) {
-                    echo "<tr class='hover:bg-gray-50'>
+                    echo "<tr class='hover:bg-gray-50 text-center'>
                             <td class='px-4 py-2 border-b border-gray-200'>{$mhs['npm']}</td>
                             <td class='px-4 py-2 border-b border-gray-200'>{$mhs['nama']}</td>
                             <td class='px-4 py-2 border-b border-gray-200'>{$mhs['kelas']}</td>
