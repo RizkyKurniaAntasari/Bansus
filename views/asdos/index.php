@@ -163,8 +163,8 @@ require_once '../head-nav-foo/navbar.php';
         class="fixed inset-0 bg-white z-50 hidden flex-col pt-16">
         <div class="container mx-auto px-4 py-4">
             <a href="#beranda" class="block py-3 text-lg font-medium border-b border-gray-100">Beranda</a>
-            <a href="#daftar-asdos" class="block py-3 text-lg font-medium border-b border-gray-100">Daftar Asdos</a>
-            <a href="#jadwal-wawancara" class="block py-3 text-lg font-medium border-b border-gray-100">Jadwal Wawancara</a>
+            <a href="#daftar_asdos" class="block py-3 text-lg font-medium border-b border-gray-100">Daftar Asdos</a>
+            <a href="#jadwal_wawancara" class="block py-3 text-lg font-medium border-b border-gray-100">Jadwal Wawancara</a>
             <a href="#pengumuman" class="block py-3 text-lg font-medium border-b border-gray-100">Pengumuman</a>
             <a href="#kontak" class="block py-3 text-lg font-medium">Kontak Kami</a>
         </div>
@@ -889,25 +889,21 @@ require_once '../head-nav-foo/navbar.php';
                         dan memberikan pengalaman berharga bagi mahasiswa.
                     </p>
                     <div class="flex space-x-4">
-                        <a
-                            href="#"
+                        <a href="https://www.instagram.com/himakomunila?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" 
                             class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-yellow-500 transition-colors">
-                            <i class="ri-facebook-fill"></i>
+                            <i class="fab fa-instagram"></i>
                         </a>
-                        <a
-                            href="#"
+                        <a href="https://youtube.com/@himakommedia?feature=shared" target="_blank" 
                             class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-yellow-500 transition-colors">
-                            <i class="ri-twitter-fill"></i>
+                            <i class="fab fa-youtube"></i>
                         </a>
-                        <a
-                            href="#"
+                        <a href="https://x.com/himakomunila?t=1bG8DiT8s-NXp2TKGOjI_A&s=09" target="_blank" 
                             class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-yellow-500 transition-colors">
-                            <i class="ri-instagram-fill"></i>
+                            <i class="fab fa-x-twitter"></i>
                         </a>
-                        <a
-                            href="#"
+                        <a href="https://www.tiktok.com/@himakomunila?_t=ZS-8wt2Q3AqynQ&_r=1" target="_blank" 
                             class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-yellow-500 transition-colors">
-                            <i class="ri-youtube-fill"></i>
+                            <i class="fab fa-tiktok"></i>
                         </a>
                     </div>
                 </div>
@@ -974,14 +970,14 @@ require_once '../head-nav-foo/navbar.php';
                                 class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
                                 <i class="ri-map-pin-line"></i>
                             </div>
-                            <span class="text-gray-400">Gedung Fakultas Ilmu Komputer, Lantai 3, Ruang 3.01</span>
+                            <span class="text-gray-400">Gedung Fakultas MIPA, Lantai 3</span>
                         </li>
                         <li class="flex items-start">
                             <div
                                 class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
                                 <i class="ri-mail-line"></i>
                             </div>
-                            <span class="text-gray-400">asdos@universitascontoh.ac.id</span>
+                            <span class="text-gray-400">badankhusus2025@gmail.com</span>
                         </li>
                         <li class="flex items-start">
                             <div
