@@ -62,7 +62,7 @@
                     <!-- Tombol Daftar -->
                     <button type="submit"
                         class="w-full bg-dark-accent text-gray-900 font-bold py-3 px-4 rounded-lg hover:bg-dark-accent-hover focus:outline-none focus:ring-2 focus:ring-dark-accent focus:ring-opacity-50">
-                        Daftar
+                        Masuk
                     </button>
                 </form>
 

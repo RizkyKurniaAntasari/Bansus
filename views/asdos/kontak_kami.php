@@ -12,7 +12,7 @@ require_once '../head-nav-foo/navbar.php';
     <title>Kontak Kami</title>
 </head>
 
-<body class="bg-white">
+<body class="bg-gray-100">
     <div class="max-w-4xl mx-auto px-4 py-10">
         <h1 class="text-3xl font-bold text-center mb-8">Kontak Kami</h1>
 

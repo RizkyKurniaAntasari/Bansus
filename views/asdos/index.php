@@ -5,6 +5,7 @@ require_once '../head-nav-foo/navbar.php';
 ?>
 <!DOCTYPE html>
 <html lang="id">
+<html class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8" />
@@ -24,9 +25,6 @@ require_once '../head-nav-foo/navbar.php';
         href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
     <style>
         /* Keeping custom styles that are not part of Tailwind defaults */
-        :where([class^="ri-"])::before {
-            content: "\f3c2";
-        }
 
         .timeline-container::after {
             content: "";
@@ -36,24 +34,6 @@ require_once '../head-nav-foo/navbar.php';
             background-color: #e5e7eb;
             top: 50%;
             transform: translateY(-50%);
-            z-index: -1;
-        }
-
-        .timeline-point {
-            position: relative;
-            z-index: 1;
-        }
-
-        .timeline-point::before {
-            content: "";
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: white;
-            border-radius: 50%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             z-index: -1;
         }
 
@@ -158,17 +138,6 @@ require_once '../head-nav-foo/navbar.php';
 </head>
 
 <body class="bg-gray-50">
-    <div
-        id="mobile-menu"
-        class="fixed inset-0 bg-white z-50 hidden flex-col pt-16">
-        <div class="container mx-auto px-4 py-4">
-            <a href="#beranda" class="block py-3 text-lg font-medium border-b border-gray-100">Beranda</a>
-            <a href="#daftar_asdos" class="block py-3 text-lg font-medium border-b border-gray-100">Daftar Asdos</a>
-            <a href="#jadwal_wawancara" class="block py-3 text-lg font-medium border-b border-gray-100">Jadwal Wawancara</a>
-            <a href="#pengumuman" class="block py-3 text-lg font-medium border-b border-gray-100">Pengumuman</a>
-            <a href="#kontak" class="block py-3 text-lg font-medium">Kontak Kami</a>
-        </div>
-    </div>
     <section id="beranda" class="">
         <div class="slider-container">
             <div class="slider">
@@ -287,8 +256,8 @@ require_once '../head-nav-foo/navbar.php';
             </div>
         </div>
     </section>
-    <section id="syarat" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
+    <section class="py-20 bg-gray-50">
+        <div id="syarat"  class="container mx-auto px-4 scroll-mt-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">
                     Syarat dan Ketentuan
@@ -423,9 +392,10 @@ require_once '../head-nav-foo/navbar.php';
                         fisik tidak diperlukan pada tahap awal.</span>
                 </div>
             </div>
+
         </div>
     </section>
-    <section id="timeline" class="py-20 bg-white">
+    <section id="timeline" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">
@@ -436,9 +406,9 @@ require_once '../head-nav-foo/navbar.php';
                     semester Ganjil 2025
                 </p>
             </div>
-            <div class="relative timeline-container max-w-4xl mx-auto px-4 py-10">
+            <div class="relative timeline-container max-w-4xl mx-auto px-4 py-10 bg-gray-50">
                 <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
-                    <div class="timeline-point flex flex-col items-center">
+                    <div class=" flex flex-col items-center">
                         <div
                             class="w-16 h-16 bg-black rounded-full border-4 border-yellow-500 flex items-center justify-center mb-4">
                             <div
@@ -454,7 +424,7 @@ require_once '../head-nav-foo/navbar.php';
                             </p>
                         </div>
                     </div>
-                    <div class="timeline-point flex flex-col items-center">
+                    <div class=" flex flex-col items-center">
                         <div
                             class="w-16 h-16 bg-black rounded-full border-4 border-yellow-500 flex items-center justify-center mb-4">
                             <div
@@ -470,7 +440,7 @@ require_once '../head-nav-foo/navbar.php';
                             </p>
                         </div>
                     </div>
-                    <div class="timeline-point flex flex-col items-center">
+                    <div class=" flex flex-col items-center">
                         <div
                             class="w-16 h-16 bg-black rounded-full border-4 border-yellow-500 flex items-center justify-center mb-4">
                             <div
@@ -486,7 +456,7 @@ require_once '../head-nav-foo/navbar.php';
                             </p>
                         </div>
                     </div>
-                    <div class="timeline-point flex flex-col items-center">
+                    <div class=" flex flex-col items-center">
                         <div
                             class="w-16 h-16 bg-black rounded-full border-4 border-yellow-500 flex items-center justify-center mb-4">
                             <div
@@ -502,7 +472,7 @@ require_once '../head-nav-foo/navbar.php';
                             </p>
                         </div>
                     </div>
-                    <div class="timeline-point flex flex-col items-center">
+                    <div class=" flex flex-col items-center">
                         <div class="w-16 h-16 bg-black rounded-full border-4 border-yellow-500 flex items-center justify-center mb-4">
                             <div
                                 class="w-8 h-8 flex items-center justify-center text-yellow-500">
@@ -530,8 +500,8 @@ require_once '../head-nav-foo/navbar.php';
             </div>
         </div>
     </section>
-    <section id="matakuliah" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
+    <section class="py-20 bg-gray-50">
+        <div id="matakuliah" class="container mx-auto px-4 scroll-mt-3">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">
                     Daftar Mata Kuliah
@@ -573,33 +543,16 @@ require_once '../head-nav-foo/navbar.php';
                 </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                <div
-                    class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
                     <div class="p-5">
                         <div class="flex justify-between items-start mb-3">
                             <h3 class="text-lg font-semibold text-gray-900">Pemrograman Website</h3>
                             <span class="bg-black text-yellow-500 text-xs px-2 py-1 rounded-full">IF-201</span>
                         </div>
                         <p class="text-gray-600 text-sm mb-4">
-                            Dasar-dasar algoritma dan implementasi dalam bahasa pemrograman
+                            Kuota: 8 Orang
                         </p>
                         <div class="flex justify-between items-center">
-                            <div>
-                                <p class="text-xs text-gray-500">Kuota Tersedia</p>
-                                <div class="flex items-center mt-1">
-                                    <div
-                                        class="w-24 h-2 bg-gray-200 rounded-full overflow-hidden">
-                                        <div
-                                            class="h-full bg-yellow-500 rounded-full"
-                                            style="width: 40%"></div>
-                                    </div>
-                                    <span class="text-sm ml-2 text-gray-700">4/10</span>
-                                </div>
-                            </div>
-                            <button
-                                class="text-yellow-500 hover:text-yellow-700 text-sm font-medium rounded-lg whitespace-nowrap">
-                                Detail
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -879,131 +832,9 @@ require_once '../head-nav-foo/navbar.php';
             </div>
         </div>
     </section>
-    <footer id="kontak" class="bg-black text-white pt-16 pb-8">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-                <div>
-                    <img src="../../img/logo/bansus.png" class="w-12">
-                    <p class="text-gray-400 mb-4">
-                        Program rekrutmen asisten dosen untuk membantu proses pembelajaran
-                        dan memberikan pengalaman berharga bagi mahasiswa.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="https://www.instagram.com/himakomunila?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" 
-                            class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-yellow-500 transition-colors">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://youtube.com/@himakommedia?feature=shared" target="_blank" 
-                            class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-yellow-500 transition-colors">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="https://x.com/himakomunila?t=1bG8DiT8s-NXp2TKGOjI_A&s=09" target="_blank" 
-                            class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-yellow-500 transition-colors">
-                            <i class="fab fa-x-twitter"></i>
-                        </a>
-                        <a href="https://www.tiktok.com/@himakomunila?_t=ZS-8wt2Q3AqynQ&_r=1" target="_blank" 
-                            class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-yellow-500 transition-colors">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Tautan Cepat</h4>
-                    <ul class="space-y-2">
-                        <li>
-                            <a
-                                href="#beranda"
-                                class="text-gray-400 hover:text-white transition-colors">Beranda</a>
-                        </li>
-                        <li>
-                            <a
-                                href="daftar_asdos.php"
-                                class="text-gray-400 hover:text-white transition-colors">Daftar Asdos</a>
-                        </li>
-                        <li>
-                            <a
-                                href="jadwal_wawancara.php"
-                                class="text-gray-400 hover:text-white transition-colors">Jadwal Wawancara</a>
-                        </li>
-                        <li>
-                            <a
-                                href="pengumuman.php"
-                                class="text-gray-400 hover:text-white transition-colors">Pengumuman</a>
-                        </li>
-                        <li>
-                            <a
-                                href="kontak_kami.php"
-                                class="text-gray-400 hover:text-white transition-colors">Kontak Kami</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Informasi</h4>
-                    <ul class="space-y-2">
-                        <li>
-                            <a
-                                href="#"
-                                class="text-gray-400 hover:text-white transition-colors">FAQ</a>
-                        </li>
-                        <li>
-                            <a
-                                href="#"
-                                class="text-gray-400 hover:text-white transition-colors">Panduan Pendaftaran</a>
-                        </li>
-                        <li>
-                            <a
-                                href="#"
-                                class="text-gray-400 hover:text-white transition-colors">Kebijakan Privasi</a>
-                        </li>
-                        <li>
-                            <a
-                                href="#"
-                                class="text-gray-400 hover:text-white transition-colors">Syarat & Ketentuan</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Kontak</h4>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
-                                <i class="ri-map-pin-line"></i>
-                            </div>
-                            <span class="text-gray-400">Gedung Fakultas MIPA, Lantai 3</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
-                                <i class="ri-mail-line"></i>
-                            </div>
-                            <span class="text-gray-400">badankhusus2025@gmail.com</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
-                                <i class="ri-phone-line"></i>
-                            </div>
-                            <span class="text-gray-400">(021) 1234-5678</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
-                                <i class="ri-time-line"></i>
-                            </div>
-                            <span class="text-gray-400">Senin - Jumat: 08.00 - 16.00 WIB</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div
-                class="pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
-                <p>
-                    &copy; 2025 Open Recruitment Asisten Dosen. Hak Cipta Dilindungi.
-                </p>
-            </div>
-        </div>
-    </footer>
+
+    <?php require_once '../head-nav-foo/footer.php'; ?>
+
     <script id="slider-script">
         document.addEventListener("DOMContentLoaded", function() {
             const slider = document.querySelector(".slider");
@@ -1041,29 +872,7 @@ require_once '../head-nav-foo/navbar.php';
             });
         });
     </script>
-    <script id="mobile-menu-script">
-        document.addEventListener("DOMContentLoaded", function() {
-            const menuButton = document.querySelector(".ri-menu-line");
-            const mobileMenu = document.getElementById("mobile-menu");
-            menuButton.addEventListener("click", function() {
-                if (mobileMenu.classList.contains("hidden")) {
-                    mobileMenu.classList.remove("hidden");
-                    mobileMenu.classList.add("flex");
-                } else {
-                    mobileMenu.classList.add("hidden");
-                    mobileMenu.classList.remove("flex");
-                }
-            });
-            // Close mobile menu when clicking on a link
-            const mobileLinks = mobileMenu.querySelectorAll("a");
-            mobileLinks.forEach((link) => {
-                link.addEventListener("click", function() {
-                    mobileMenu.classList.add("hidden");
-                    mobileMenu.classList.remove("flex");
-                });
-            });
-        });
-    </script>
+
     <script id="search-filter-script">
         document.addEventListener("DOMContentLoaded", function() {
             const searchInput = document.getElementById("search-matkul");
@@ -1109,25 +918,7 @@ require_once '../head-nav-foo/navbar.php';
             );
         });
     </script>
-    <script id="smooth-scroll-script">
-        document.addEventListener("DOMContentLoaded", function() {
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-                anchor.addEventListener("click", function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute("href");
-                    if (targetId === "#") return;
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80, // Adjust for header height
-                            behavior: "smooth",
-                        });
-                    }
-                });
-            });
-        });
-    </script>
+
 </body>
 
 </html>

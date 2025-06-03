@@ -7,13 +7,3 @@
 body {
   @apply font-sans;
 }
-
-        .gradient-yellow-bg {
-            background: linear-gradient(135deg, #FFCC00 0%, #FFB100 100%);
-        }
-        .btn-login {
-            @apply w-full gradient-yellow-bg text-black font-bold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-dark-accent-hover focus:ring-opacity-50;
-        }
-        .form-input-custom {
-            @apply w-full py-3 px-4 bg-dark-input-bg text-dark-text-primary border border-dark-border rounded-lg leading-tight placeholder-dark-text-secondary focus:outline-none focus:border-dark-accent focus:ring-1 focus:ring-dark-accent shadow-sm;
-        }

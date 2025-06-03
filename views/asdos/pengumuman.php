@@ -13,7 +13,7 @@ require_once '../head-nav-foo/navbar.php';
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-white">
+<body class="bg-gray-100">
 
     <div class="px-10 py-6">
         <h1 class="text-3xl font-bold mb-8 pt-3 text-center text-gray-800">Selamat & Sukses Asisten Dosen Baru!</h1>
@@ -59,10 +59,10 @@ require_once '../head-nav-foo/navbar.php';
             echo "<div class='grid grid-cols-1 md:grid-cols-2 gap-6'>";
             foreach ($matkulList as $matkul => $mahasiswa) {
                 echo "<div class='bg-white shadow-md rounded-lg overflow-hidden'>";
-                echo "<div class='bg-[#ffcc00] text-black px-4 py-2 text-lg font-semibold'>$matkul</div>";
+                echo "<div class='bg-white text-black px-4 py-2 text-lg font-semibold'>$matkul</div>";
                 echo "<div class='p-4 overflow-x-auto'>";
                 echo "<table class='min-w-full border border-gray-200 text-sm'>";
-                echo "<thead class='bg-gray-100'>";
+                echo "<thead class='bg-[#ffcc00]'>";
                 echo "<tr class='text-center'>
                         <th class='px-4 py-2 border-b border-gray-300'>NPM</th>
                         <th class='px-4 py-2 border-b border-gray-300'>Nama</th>
