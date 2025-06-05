@@ -1,17 +1,12 @@
 <?php
-session_start();
-
 // Simulasi user login (ganti dengan validasi dari database untuk versi produksi)
-$_SESSION['npm'] = '2217051001';
-$_SESSION['nama'] = 'Putri Aulia';
-
 $currentPage = basename($_SERVER['PHP_SELF']);
 require_once '../head-nav-foo/header.php';
 require_once '../head-nav-foo/navbar.php';
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">  
 
 <head>
   <meta charset="UTF-8" />

@@ -2,6 +2,7 @@
 $currentPage = basename($_SERVER['PHP_SELF']);
 require_once '../head-nav-foo/header.php';
 require_once '../head-nav-foo/navbar.php';
+include '../../db.php';
 ?>
 <!-- Data Matkul -->
 <?php
