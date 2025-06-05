@@ -7,45 +7,44 @@ require_once '../head-nav-foo/navbar.php';
 <?php
             $matkul = [
                 [
-                    'nama' => 'Pemrograman Website',
-                    'kode' => 'IF-201',
+                    'nama' => 'Logika',
+                    'dosen' => 'Ani Rose Irawati, S.T., M.Cs.',
                     'kuota' => 10
                 ],
                 [
                     'nama' => 'Basis Data',
-                    'kode' => 'IF-304',
+                    'dosen' => 'Dr. Aristoteles, S.Si., M.Si.',
                     'kuota' => 8
                 ],
                 [
-                    'nama' => 'Pemrograman Web',
-                    'kode' => 'IF-305',
-                    'kuota' => 6
+                    'nama' => 'Multimedia',
+                    'dosen' => 'Yunda Heningtyas, M. Kom.',
+                    'kuota' => 4
                 ],
                 [
-                    'nama' => 'Jaringan Komputer',
-                    'kode' => 'IF-306',
+                    'nama' => 'Pem. Interpreter',
+                    'dosen' => 'Rahman Taufik, M.Kom',
+                    'kuota' => 4
+                ],
+                [
+                    'nama' => 'Komdat Jarkom',
+                    'dosen' => 'RICO ANDRIAN, S.Si., M.Kom.',
                     'kuota' => 8
                 ],
                 [
-                    'nama' => 'Sistem Operasi',
-                    'kode' => 'IF-303',
+                    'nama' => 'DDP',
+                    'dosen' => 'Dwi Sakethi, S.Si., M.Kom.',
+                    'kuota' => 10
+                ],
+                [
+                    'nama' => 'Matematika',
+                    'dosen' => 'Dewi Asiah Shofiana, M.Kom',
+                    'kuota' => 10
+                ],
+                [
+                    'nama' => 'PBO',
+                    'dosen' => 'DIDIK KURNIAWAN S.SI, M.T',
                     'kuota' => 8
-                ],
-                [
-                    'nama' => 'Kecerdasan Buatan',
-                    'kode' => 'IF-401',
-                    'kuota' => 6
-                ],
-                [
-                    'nama' => 'Analisis Algoritma',
-                    'kode' => 'IF-302',
-                    'kuota' => 2
-                ],
-                [
-                    'nama' => 'Pemrograman Mobile',
-                    'kode' => 'IF-405',
-                    'deskripsi' => 'Teori dan Aplikasi Mobile',
-                    'kuota' => 2
                 ],
             ];
             ?>
@@ -255,11 +254,10 @@ require_once '../head-nav-foo/navbar.php';
                     <div class="slide-overlay">
                         <div class="slide-content">
                             <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
-                                Berbagi Pengetahuan, Tumbuh Bersama
+                                Konfersi Mata Kuliah sebagai Benefit
                             </h1>
                             <p class="text-white text-lg mb-8">
-                                Bergabunglah dengan komunitas asisten dosen dan bantu
-                                mahasiswa lain untuk berkembang
+                                Pengalaman Anda sebagai Asisten Dosen dapat dikonfersikan ke matakuliah Tugas Khusus
                             </p>
                             <a
                                 href="daftar_asdos.php"
@@ -276,11 +274,10 @@ require_once '../head-nav-foo/navbar.php';
                     <div class="slide-overlay">
                         <div class="slide-content">
                             <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
-                                Berbagi Pengetahuan, Tumbuh Bersama
+                                Memperkaya CV Anda
                             </h1>
                             <p class="text-white text-lg mb-8">
-                                Bergabunglah dengan komunitas asisten dosen dan bantu
-                                mahasiswa lain untuk berkembang
+                                Pengalaman Anda sebagai Asisten Dosen akan memperkaya CV dan Portofolio Anda
                             </p>
                             <a
                                 href="daftar_asdos.php"
@@ -304,130 +301,93 @@ require_once '../head-nav-foo/navbar.php';
         </div>
     </section>
     <section class="py-20 bg-gray-50">
-        <div id="syarat" class="container mx-auto px-4 scroll-mt-8">
+        <div id="syarat" class="container mx-auto px-4 scroll-mt-20">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">
-                    Syarat dan Ketentuan
+                    Syarat dan Komitmen
                 </h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">
                     Berikut adalah persyaratan yang harus dipenuhi untuk menjadi asisten
                     dosen pada semester Ganjil 2025
                 </p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div
-                    class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <div
-                        class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
-                        <i class="ri-user-line ri-lg text-yellow-500"></i>
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-4">
+                    <!-- Persyaratan -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <button onclick="toggleAccordion('akademik')" class="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
+                                    <i class="ri-user-line ri-lg text-yellow-500"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold">Persyaratan</h3>
+                            </div>
+                            <i class="ri-arrow-down-s-line text-2xl text-gray-500 transition-transform" id="akademik-arrow"></i>
+                        </button>
+                        <div id="akademik" class="hidden px-6 pb-6">
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
+                                        <i class="ri-checkbox-circle-line"></i>
+                                    </div>
+                                    <span>Mahasiswa Aktif Jurusan Ilmu Komputer Universitas Lampung angkatan 2024, 2023 dan 2022.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
+                                        <i class="ri-checkbox-circle-line"></i>
+                                    </div>
+                                    <span>Lulus mata kuliah pilihan yang dipilih.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
+                                        <i class="ri-checkbox-circle-line"></i>
+                                    </div>
+                                    <span>Mengupload Surat Pernyataan</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Persyaratan Akademik</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
-                                <i class="ri-checkbox-circle-line"></i>
+
+                    <!-- Komitmen -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <button onclick="toggleAccordion('komitmen')" class="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
+                                    <i class="ri-time-line ri-lg text-yellow-500"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold">Komitmen</h3>
                             </div>
-                            <span>Mahasiswa aktif minimal semester 3</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
-                                <i class="ri-checkbox-circle-line"></i>
-                            </div>
-                            <span>IPK minimal 3.25</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
-                                <i class="ri-checkbox-circle-line"></i>
-                            </div>
-                            <span>Nilai mata kuliah yang dilamar minimal A-</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
-                                <i class="ri-checkbox-circle-line"></i>
-                            </div>
-                            <span>Tidak sedang mengambil cuti akademik</span>
-                        </li>
-                    </ul>
-                </div>
-                <div
-                    class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <div
-                        class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
-                        <i class="ri-file-list-line ri-lg text-yellow-500"></i>
+                            <i class="ri-arrow-down-s-line text-2xl text-gray-500 transition-transform" id="komitmen-arrow"></i>
+                        </button>
+                        <div id="komitmen" class="hidden px-6 pb-6">
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
+                                        <i class="ri-checkbox-circle-line"></i>
+                                    </div>
+                                    <span>Bersedia mengikuti ketentuan yang nantinya ditetapkan.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
+                                        <i class="ri-checkbox-circle-line"></i>
+                                    </div>
+                                    <span>Bersedia mengajar 1 semester dengan penuh tanggungjawab.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
+                                        <i class="ri-checkbox-circle-line"></i>
+                                    </div>
+                                    <span>Berpartisipasi dalam kegiatan Forum Silaturahmi (FoSi) Asdos.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
+                                        <i class="ri-checkbox-circle-line"></i>
+                                    </div>
+                                    <span>Berpartisipasi dalam kegiatan Pelatihan Asisten Dosen.</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Dokumen Pendaftaran</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
-                                <i class="ri-checkbox-circle-line"></i>
-                            </div>
-                            <span>Transkrip nilai terbaru</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
-                                <i class="ri-checkbox-circle-line"></i>
-                            </div>
-                            <span>CV akademik (format PDF)</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
-                                <i class="ri-checkbox-circle-line"></i>
-                            </div>
-                            <span>Surat motivasi (maks. 500 kata)</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
-                                <i class="ri-checkbox-circle-line"></i>
-                            </div>
-                            <span>Pas foto terbaru (3x4)</span>
-                        </li>
-                    </ul>
-                </div>
-                <div
-                    class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <div
-                        class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
-                        <i class="ri-time-line ri-lg text-yellow-500"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Komitmen Waktu</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
-                                <i class="ri-checkbox-circle-line"></i>
-                            </div>
-                            <span>Bersedia mengalokasikan 6-10 jam per minggu</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
-                                <i class="ri-checkbox-circle-line"></i>
-                            </div>
-                            <span>Menghadiri pertemuan koordinasi mingguan</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
-                                <i class="ri-checkbox-circle-line"></i>
-                            </div>
-                            <span>Berpartisipasi dalam sesi pelatihan awal</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div
-                                class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-yellow-500">
-                                <i class="ri-checkbox-circle-line"></i>
-                            </div>
-                            <span>Tidak ada jadwal bentrok dengan jadwal mata kuliah</span>
-                        </li>
-                    </ul>
                 </div>
             </div>
             <div class="mt-12 text-center">
@@ -439,7 +399,6 @@ require_once '../head-nav-foo/navbar.php';
                         fisik tidak diperlukan pada tahap awal.</span>
                 </div>
             </div>
-
         </div>
     </section>
     <section id="timeline" class="py-20 bg-gray-50">
@@ -453,9 +412,9 @@ require_once '../head-nav-foo/navbar.php';
                     semester Ganjil 2025
                 </p>
             </div>
-            <div class="relative timeline-container max-w-4xl mx-auto px-4 py-10 bg-gray-50">
-                <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
-                    <div class=" flex flex-col items-center">
+            <div class="relative timeline-container max-w-4xl mx-auto px-4 py-6 bg-gray-50">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="flex flex-col items-center">
                         <div
                             class="w-16 h-16 bg-black rounded-full border-4 border-yellow-500 flex items-center justify-center mb-4">
                             <div
@@ -465,45 +424,13 @@ require_once '../head-nav-foo/navbar.php';
                         </div>
                         <div class="text-center">
                             <h4 class="font-semibold text-gray-900">Pendaftaran</h4>
-                            <p class="text-sm text-gray-600 mt-1">2 - 15 Juni 2025</p>
+                            <p class="text-sm text-gray-600 mt-1">1 - 7 Juli 2025</p>
                             <p class="text-xs text-gray-500 mt-2">
-                                Pengisian formulir dan upload dokumen
+                                Pengisian formulir dan upload surat pernyataan
                             </p>
                         </div>
                     </div>
-                    <div class=" flex flex-col items-center">
-                        <div
-                            class="w-16 h-16 bg-black rounded-full border-4 border-yellow-500 flex items-center justify-center mb-4">
-                            <div
-                                class="w-8 h-8 flex items-center justify-center text-yellow-500">
-                                <i class="ri-file-search-line ri-lg"></i>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <h4 class="font-semibold text-gray-900">Seleksi Berkas</h4>
-                            <p class="text-sm text-gray-600 mt-1">16 - 22 Juni 2025</p>
-                            <p class="text-xs text-gray-500 mt-2">
-                                Verifikasi dokumen dan persyaratan
-                            </p>
-                        </div>
-                    </div>
-                    <div class=" flex flex-col items-center">
-                        <div
-                            class="w-16 h-16 bg-black rounded-full border-4 border-yellow-500 flex items-center justify-center mb-4">
-                            <div
-                                class="w-8 h-8 flex items-center justify-center text-yellow-500">
-                                <i class="ri-edit-line ri-lg"></i>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <h4 class="font-semibold text-gray-900">Tes Tertulis</h4>
-                            <p class="text-sm text-gray-600 mt-1">24 - 25 Juni 2025</p>
-                            <p class="text-xs text-gray-500 mt-2">
-                                Ujian pengetahuan mata kuliah
-                            </p>
-                        </div>
-                    </div>
-                    <div class=" flex flex-col items-center">
+                    <div class="flex flex-col items-center">
                         <div
                             class="w-16 h-16 bg-black rounded-full border-4 border-yellow-500 flex items-center justify-center mb-4">
                             <div
@@ -513,14 +440,15 @@ require_once '../head-nav-foo/navbar.php';
                         </div>
                         <div class="text-center">
                             <h4 class="font-semibold text-gray-900">Wawancara</h4>
-                            <p class="text-sm text-gray-600 mt-1">27 - 30 Juni 2025</p>
+                            <p class="text-sm text-gray-600 mt-1">28 Juli - 02 Agustus 2025</p>
                             <p class="text-xs text-gray-500 mt-2">
-                                Wawancara dengan dosen pengampu
+                                Wawancara dengan Badan Khusus atau Dosen Pengampu Mata Kuliah
                             </p>
                         </div>
                     </div>
-                    <div class=" flex flex-col items-center">
-                        <div class="w-16 h-16 bg-black rounded-full border-4 border-yellow-500 flex items-center justify-center mb-4">
+                    <div class="flex flex-col items-center">
+                        <div
+                            class="w-16 h-16 bg-black rounded-full border-4 border-yellow-500 flex items-center justify-center mb-4">
                             <div
                                 class="w-8 h-8 flex items-center justify-center text-yellow-500">
                                 <i class="ri-medal-line ri-lg"></i>
@@ -528,7 +456,7 @@ require_once '../head-nav-foo/navbar.php';
                         </div>
                         <div class="text-center">
                             <h4 class="font-semibold text-gray-900">Pengumuman</h4>
-                            <p class="text-sm text-gray-600 mt-1">5 Juli 2025</p>
+                            <p class="text-sm text-gray-600 mt-1">05 Agustus 2025</p>
                             <p class="text-xs text-gray-500 mt-2">
                                 Pengumuman hasil seleksi
                             </p>
@@ -542,7 +470,7 @@ require_once '../head-nav-foo/navbar.php';
                     <div class="w-5 h-5 flex items-center justify-center mr-2">
                         <i class="ri-calendar-check-line"></i>
                     </div>
-                    <span class="font-medium">Saat ini: Tahap Pendaftaran (2 - 15 Juni 2025)</span>
+                    <span class="font-medium">Saat ini: Pendaftaran Asisten Dosen Ganjil 2025 Belum Dibuka</span>
                 </div>
             </div>
         </div>
@@ -585,7 +513,7 @@ require_once '../head-nav-foo/navbar.php';
                     </div>
                     <div class="flex items-center gap-2">
                         <input type="checkbox" id="filter_manajemeninformasir" />
-                        <label for="filter_manajemeninformasir" class="text-sm text-gray-700">D3 Manajemen Informasi</label>
+                        <label for="filter_manajemeninformasir" class="text-sm text-gray-700">D3 Manajemen Informatika</label>
                     </div>
                 </div>
             </div>
@@ -595,9 +523,9 @@ require_once '../head-nav-foo/navbar.php';
                 ?>
                     <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
                         <div class="p-5">
-                            <div class="flex justify-between items-start mb-3">
+                            <div class="flex justify-between items-start mb-1">
                                 <h3 class="text-lg font-semibold text-gray-900"><?= htmlspecialchars($m['nama']) ?></h3>
-                                <span class="bg-black text-yellow-500 text-xs px-2 py-1 rounded-full"><?= htmlspecialchars($m['kode']) ?></span>
+                                <span class="bg-black text-yellow-500 text-xs px-2 py-1 rounded-full"><?= htmlspecialchars($m['dosen']) ?></span>
                             </div>
 
                             <div class="flex justify-between items-center">
@@ -638,11 +566,11 @@ require_once '../head-nav-foo/navbar.php';
             </div>
         </div>
     </section>
-    <section id="daftar" class="py-20 bg-black text-white">
+    <section id="daftar" class="py-8 bg-black text-white">
         <div class="container mx-auto px-4">
             <div class="max-w-3xl mx-auto text-center">
                 <h2 class="text-3xl font-bold mb-6">
-                    Siap Menjadi Bagian dari Tim Pengajar?
+                    Siap Menjadi Bagian dari Tim Asdos Ganjil 2025?
                 </h2>
                 <p class="text-lg mb-8 opacity-90">
                     Jangan lewatkan kesempatan untuk mengembangkan kemampuan akademik
@@ -655,7 +583,7 @@ require_once '../head-nav-foo/navbar.php';
                     Daftar Sekarang
                 </a>
                 <p class="mt-6 text-sm opacity-80">
-                    Pendaftaran ditutup pada 15 Juni 2025, pukul 23:59 WIB
+                    Pendaftaran ditutup pada 14 Juli 2025, pukul 23:59 WIB
                 </p>
             </div>
         </div>
@@ -673,18 +601,15 @@ require_once '../head-nav-foo/navbar.php';
 
             function goToSlide(index) {
                 slider.style.transform = `translateX(-${index * 100}%)`;
-                // Update active dot
                 dots.forEach((dot) => dot.classList.remove("active"));
                 dots[index].classList.add("active");
                 currentSlide = index;
             }
-            // Set up dot click events
             dots.forEach((dot, index) => {
                 dot.addEventListener("click", () => {
                     goToSlide(index);
                 });
             });
-            // Auto slide
             function nextSlide() {
                 let next = currentSlide + 1;
                 if (next >= slideCount) {
@@ -692,9 +617,7 @@ require_once '../head-nav-foo/navbar.php';
                 }
                 goToSlide(next);
             }
-            // Start auto sliding
             const slideInterval = setInterval(nextSlide, 5000);
-            // Stop auto sliding on hover
             slider.addEventListener("mouseenter", () => {
                 clearInterval(slideInterval);
             });
@@ -705,39 +628,34 @@ require_once '../head-nav-foo/navbar.php';
         document.addEventListener("DOMContentLoaded", function() {
             const searchInput = document.getElementById("search-matkul");
             const filterAll = document.getElementById("filter_all");
-            const filterInformatika = document.getElementById("filter_ilmukomputer");
+            const filterIlmuKomputer = document.getElementById("filter_ilmukomputer");
             const filterSistemInformasi = document.getElementById(
                 "filter_sistem_informasi",
             );
-            const filterTeknikKomputer = document.getElementById(
+            const filterManajemenInformatika = document.getElementById(
                 "filter_manajemeninformasir",
             );
-            // Filter functionality would go here in a real application
-            // This is just a placeholder for demonstration
+            
             searchInput.addEventListener("input", function() {
-                // Search functionality would go here
                 console.log("Searching for:", this.value);
             });
-            // When "All" is checked, uncheck others
             filterAll.addEventListener("change", function() {
                 if (this.checked) {
-                    filterInformatika.checked = false;
+                    filterIlmuKomputer.checked = false;
                     filterSistemInformasi.checked = false;
-                    filterTeknikKomputer.checked = false;
+                    filterManajemenInformatika.checked = false;
                 }
             });
-            // When any other filter is checked, uncheck "All"
-            [filterInformatika, filterSistemInformasi, filterTeknikKomputer].forEach(
+            [filterIlmuKomputer, filterSistemInformasi, filterManajemenInformatika].forEach(
                 (filter) => {
                     filter.addEventListener("change", function() {
                         if (this.checked) {
                             filterAll.checked = false;
                         }
-                        // If none are checked, check "All"
                         if (
-                            !filterInformatika.checked &&
+                            !filterIlmuKomputer.checked &&
                             !filterSistemInformasi.checked &&
-                            !filterTeknikKomputer.checked
+                            !filterManajemenInformatika.checked
                         ) {
                             filterAll.checked = true;
                         }
@@ -745,6 +663,20 @@ require_once '../head-nav-foo/navbar.php';
                 },
             );
         });
+    </script>
+
+    <script>
+        function toggleAccordion(id) {
+            const element = document.getElementById(id);
+            const arrow = document.getElementById(`${id}-arrow`);
+            if (element.classList.contains('hidden')) {
+                element.classList.remove('hidden');
+                arrow.classList.remove('rotate-180');
+            } else {
+                element.classList.add('hidden');
+                arrow.classList.add('rotate-180');
+            }
+        }
     </script>
 
 </body>

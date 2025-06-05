@@ -1,17 +1,13 @@
 <?php
-session_start();
-
 // Simulasi user login (ganti dengan validasi dari database untuk versi produksi)
-$_SESSION['npm'] = '2217051001';
-$_SESSION['nama'] = 'Putri Aulia';
-
 $currentPage = basename($_SERVER['PHP_SELF']);
 require_once '../head-nav-foo/header.php';
 require_once '../head-nav-foo/navbar.php';
+include '../../db.php';
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">  
 
 <head>
   <meta charset="UTF-8" />
@@ -36,13 +32,13 @@ require_once '../head-nav-foo/navbar.php';
   <div class="max-w-5xl mx-auto p-6">
     <h1 class="text-3xl font-bold text-center mb-8">Jadwal Wawancara Calon Asisten</h1>
 
-    <div class="flex justify-center mb-4">
+    <div class="flex justify-end mb-4">
       <select id="daySelector" class="p-2 rounded border">
-        <option value="1">Hari ke-1</option>
-        <option value="2">Hari ke-2</option>
-        <option value="3">Hari ke-3</option>
-        <option value="4">Hari ke-4</option>
-        <option value="5">Hari ke-5</option>
+        <option value="1">28 Juni 2025</option>
+        <option value="2">29 Juni 2025</option>
+        <option value="3">30 Juni 2025</option>
+        <!-- <option value="4">Hari ke-4</option>
+        <option value="5">Hari ke-5</option> -->
       </select>
     </div>
 
