@@ -39,7 +39,6 @@ if (isset($_SESSION['user'])) {
             <a href="https://x.com/himakomunila" target="_blank" title="X"><i class="fab fa-x-twitter"></i></a>
             <a href="https://www.tiktok.com/@himakomunila" target="_blank" title="TikTok"><i class="fab fa-tiktok mr-5"></i></a>
 
-
             <!-- Avatar User -->
             <?php if (!empty($nama)): ?>
                 <div class="flex items-center space-x-2">
@@ -51,7 +50,7 @@ if (isset($_SESSION['user'])) {
                     </a>
 
                 </div>
-            <?php else: ?>
+            <?php else: ?>   
                 <a href="/teori/bansus/controller/asdos/logout_logic.php">
                     <img src="../../img/user.jpg"
                         alt="Default Avatar"

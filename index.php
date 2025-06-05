@@ -108,7 +108,7 @@
                     $query = mysqli_query($conn, $sql);
 
                     if ($query) {
-                        echo "<script>alert('Akun berhasil dibuat!'); window.location='views/asdos/index.php';</script>";
+                        echo "<script>alert('Akun berhasil dibuat!'); window.location='login.php';</script>";
                     } else {
                         echo "<div class='text-red-500 mt-4'>Gagal membuat akun: " . mysqli_error($conn) . "</div>";
                     }

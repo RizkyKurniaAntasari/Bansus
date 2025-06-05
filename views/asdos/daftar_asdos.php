@@ -2,6 +2,21 @@
 $currentPage = basename($_SERVER['PHP_SELF']);
 require_once '../head-nav-foo/header.php';
 require_once '../head-nav-foo/navbar.php';
+include '../../db.php';
+$nama = '';
+$npm = '';
+
+if (isset($_SESSION['user'])) {
+    $user_id = $_SESSION['user'];
+    $query = "SELECT nama, npm FROM asdos WHERE npm = $user_id LIMIT 1";
+    $result = mysqli_query($conn, $query);
+
+    if ($result && mysqli_num_rows($result) === 1) {
+        $row = mysqli_fetch_assoc($result);
+        $nama = $row['nama'];
+        $npm = $row['npm'];
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,21 +29,24 @@ require_once '../head-nav-foo/navbar.php';
 </head>
 
 <body class="bg-gray-100">
-    <section class="p-8 max-w-4xl mx-auto bg-white shadow-md rounded-md ">
+    <section class="p-8 max-w-4xl mx-auto bg-white shadow-md rounded-md mb-10 mt-8">
         <h2 class="text-center text-3xl font-bold text-black mb-10  ">Form Pendaftaran Asisten Dosen</h2>
         <form action="#" method="POST" enctype="multipart/form-data" class="space-y-5" autocomplete="off">
 
             <!-- Nama Lengkap -->
             <div>
                 <label class="block font-bold mb-1">Nama Lengkap</label>
-                <input type="text" name="nama" required class="w-full border border-gray-400 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#ffcc00]">
+                <input type="text" name="nama" value="<?= htmlspecialchars($nama) ?>" readonly
+                    class="w-full border border-gray-400 bg-gray-100 rounded px-4 py-2 focus:outline-none">
             </div>
 
             <!-- NPM -->
             <div>
                 <label class="block font-bold mb-1">NPM</label>
-                <input type="text" name="npm" required class="w-full border border-gray-400 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#ffcc00]">
+                <input type="text" name="npm" value="<?= htmlspecialchars($npm) ?>" readonly
+                    class="w-full border border-gray-400 bg-gray-100 rounded px-4 py-2 focus:outline-none">
             </div>
+
 
             <!-- Handphone -->
             <div>
@@ -117,7 +135,9 @@ require_once '../head-nav-foo/navbar.php';
 
         </form>
     </section>
-
+    <?php
+        require_once '../head-nav-foo/footer.php'
+    ?>
 </body>
 
 </html>
