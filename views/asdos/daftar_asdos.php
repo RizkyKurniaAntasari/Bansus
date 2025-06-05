@@ -105,17 +105,17 @@ if (isset($_SESSION['user'])) {
             <!-- PENGALAMAN JADI ASDOS -->
             <div>
                 <label class="block font-bold mb-1">Apakah Anda sudah pernah menjadi asdos?</label>
-                <select name="kebersediaan" required class="w-full border border-gray-400 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#ffcc00]">
+                <select name="pengalaman" required class="w-full border border-gray-400 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#ffcc00]">
                     <option value="" disabled selected>Pilih Jawaban</option>
                     <option>Sudah Pernah</option>
                     <option>Belum Pernah</option>
                 </select>
             </div>
 
-            <!-- KEBERSEDIAAN BUKAN PRIORITAS -->
+            <!--  BUKAN PRIORITAS -->
             <div>
                 <label class="block font-bold mb-1">Apakah Anda bersedia ditempatkan pada mata kuliah selain yang dipilih</label>
-                <select name="kebersediaan" required class="w-full border border-gray-400 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#ffcc00]">
+                <select name="prioritas" required class="w-full border border-gray-400 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#ffcc00]">
                     <option value="" disabled selected>Pilih Jawaban</option>
                     <option>Bersedia</option>
                     <option>Tidak Bersedia</option>
