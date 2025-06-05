@@ -38,25 +38,42 @@ if (isset($_SESSION['user'])) {
             <a href="https://youtube.com/@himakommedia" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
             <a href="https://x.com/himakomunila" target="_blank" title="X"><i class="fab fa-x-twitter"></i></a>
             <a href="https://www.tiktok.com/@himakomunila" target="_blank" title="TikTok"><i class="fab fa-tiktok mr-5"></i></a>
-
+            
+            <!-- <?php 
+            // echo "<pre>"; // debugging
+            // print_r($_SESSION);
+            // echo "</pre>";
+            ?>
+             -->
             <!-- Avatar User -->
             <?php if (!empty($nama)): ?>
-                <div class="flex items-center space-x-2">
-                    <a href="/teori/bansus/controller/asdos/logout_logic.php"
-                        onclick="return confirm('Apakah Anda yakin ingin logout?')">
-                        <img src="https://ui-avatars.com/api/?name=<?= urlencode($nama) ?>"
-                            alt="Avatar"
-                            class="w-8 h-8 md:w-9 md:h-9 rounded-full object-cover border-2 border-white hover:border-yellow-400 transition duration-300" />
-                    </a>
+                <div class="relative group">
+                    <img src="https://ui-avatars.com/api/?name=<?= urlencode($nama) ?>"
+                        alt="Avatar"
+                        class="cursor-pointer w-8 h-8 md:w-9 md:h-9 rounded-full object-cover border-2 border-white hover:border-yellow-400 transition duration-300" />
 
+                    <!-- Dropdown Menu -->
+                    <div class="absolute right-0 w-40 bg-white rounded shadow-md z-50 hidden group-hover:block">
+                        <a href="/teori/bansus/controller/asdos/logout_logic.php"
+                            onclick="return confirm('Apakah Anda yakin ingin logout?')"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-100">
+                            Logout
+                        </a>
+                        <a href="../../controller/asdos/delete_account_logic.php"
+                            onclick="return confirm('Apakah Anda yakin ingin menghapus akun ini? Tindakan ini tidak bisa dibatalkan.')"
+                            class="block px-4 py-2 text-sm text-red-600 hover:bg-red-100">
+                            Delete Account
+                        </a>
+                    </div>
                 </div>
-            <?php else: ?>   
+            <?php else: ?>
                 <a href="/teori/bansus/controller/asdos/logout_logic.php">
                     <img src="../../img/user.jpg"
                         alt="Default Avatar"
                         class="w-8 h-8 md:w-9 md:h-9 rounded-full object-cover border-2 border-white hover:border-yellow-400 transition duration-300" />
                 </a>
             <?php endif; ?>
+
 
 
 
