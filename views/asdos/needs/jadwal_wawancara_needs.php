@@ -28,7 +28,7 @@ if (isset($_SESSION['user'])) {
 
 // Main block to generate schedule data
 $jadwalDB = [];
-for ($hari = 1; $hari <= 3; $hari++) {
+for ($hari = 1; $hari <= 5; $hari++) {
     // 1. Get the filled data from the database for the related day
     $dbSlots = [];
     $sql = "SELECT jam, waktu_text, npm, nama, keterangan, hari FROM jadwal_wawancara WHERE hari = ?";
@@ -57,7 +57,7 @@ for ($hari = 1; $hari <= 3; $hari++) {
             $start = clone $breakEnd; // Jump straight to 12:40
         }
 
-        $slotLabel = "S$slotIndex";
+        $slotLabel = "$slotIndex";
         $jamAwal = $start->format('H:i');
 
         // Calculate the end time of the slot

@@ -1,4 +1,8 @@
-<?php require_once 'needs/jadwal_wawancara_needs.php'; ?>
+<?php 
+$currentPage = basename($_SERVER['PHP_SELF']);
+require_once 'needs/jadwal_wawancara_needs.php';
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 
@@ -27,9 +31,11 @@
 
         <div class="flex justify-end mb-4">
             <select id="daySelector" class="p-2 rounded border">
-                <option value="1">28 Juli 2025</option>
-                <option value="2">29 Juli 2025</option>
-                <option value="3">30 Juli 2025</option>
+                <option value="1">28 Juni 2025</option>
+                <option value="2">29 Juni 2025</option>
+                <option value="3">30 Juni 2025</option>
+                <option value="5">1 Juli 2025</option>
+                <option value="5">2  Juli 2025</option>
             </select>
         </div>
 
@@ -44,6 +50,7 @@
     </script>
     <script src="js/jadwal_wawancara_script.js"></script>
 
+  <?php require_once '../head-nav-foo/footer.php' ?>
 </body>
 
 </html>
