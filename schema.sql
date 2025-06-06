@@ -33,3 +33,5 @@ CREATE TABLE jadwal_wawancara (
   UNIQUE (hari, jam)
 );
 
+ALTER TABLE jadwal_wawancara
+ADD UNIQUE KEY `hari_jam_unique` (`hari`, `jam`);
