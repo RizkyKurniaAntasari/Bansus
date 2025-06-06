@@ -301,7 +301,7 @@ require_once '../head-nav-foo/navbar.php';
         </div>
     </section>
     <section class="py-20 bg-gray-50">
-        <div id="syarat" class="container mx-auto px-4 scroll-mt-20">
+        <div id="syarat" class="container mx-auto px-4 scroll-mt-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">
                     Syarat dan Komitmen
@@ -566,7 +566,7 @@ require_once '../head-nav-foo/navbar.php';
             </div>
         </div>
     </section>
-    <section id="daftar" class="py-8 bg-black text-white">
+    <section id="daftar" class="py-20 bg-black text-white">
         <div class="container mx-auto px-4">
             <div class="max-w-3xl mx-auto text-center">
                 <h2 class="text-3xl font-bold mb-6">

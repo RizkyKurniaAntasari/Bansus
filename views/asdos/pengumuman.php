@@ -21,33 +21,33 @@ require_once '../head-nav-foo/navbar.php';
         <?php
         $jadwal = [
             'Semester 1' => [
-                'Pengantar Ilmu Komputer' => [
-                    ['npm' => '2310110001', 'nama' => 'Ali Akbar', 'Keterangan' => 'Koordinator', 'kelas' => 'A'],
-                    ['npm' => '2310110002', 'nama' => 'Budi Santoso', 'Keterangan' => 'Anggota', 'kelas' => 'B'],
+                'Logika' => [
+                    ['npm' => '2410110001', 'nama' => 'Lekok Indah Lia', 'Keterangan' => 'Koordinator', 'kelas' => 'A'],
+                    ['npm' => '2410110002', 'nama' => 'Nadya Arsa', 'Keterangan' => 'Anggota', 'kelas' => 'B'],
                 ],
-                'Logika Matematika' => [
-                    ['npm' => '2310110003', 'nama' => 'Citra Lestari', 'Keterangan' => 'Koordinator', 'kelas' => 'C'],
-                    ['npm' => '2310110004', 'nama' => 'Dewi Ayu', 'Keterangan' => 'Anggota', 'kelas' => 'D'],
+                'Matematika' => [
+                    ['npm' => '2410110003', 'nama' => 'Rizky Kurnia A', 'Keterangan' => 'Koordinator', 'kelas' => 'C'],
+                    ['npm' => '2410110004', 'nama' => 'Samuel Ananta', 'Keterangan' => 'Anggota', 'kelas' => 'D'],
                 ],
             ],
             'Semester 3' => [
-                'Struktur Data' => [
-                    ['npm' => '2310110005', 'nama' => 'Eka Putra', 'Keterangan' => 'Koordinator', 'kelas' => 'A'],
-                    ['npm' => '2310110006', 'nama' => 'Fajar Pratama', 'Keterangan' => 'Anggota', 'kelas' => 'C'],
-                ],
                 'Basis Data' => [
-                    ['npm' => '2310110007', 'nama' => 'Gina Rahma', 'Keterangan' => 'Koordinator', 'kelas' => 'B'],
-                    ['npm' => '2310110008', 'nama' => 'Hadi Saputra', 'Keterangan' => 'Anggota', 'kelas' => 'D'],
+                    ['npm' => '2310110005', 'nama' => 'Dea Delvinata R', 'Keterangan' => 'Koordinator', 'kelas' => 'A'],
+                    ['npm' => '2310110006', 'nama' => 'Alfi Rahma A', 'Keterangan' => 'Anggota', 'kelas' => 'C'],
+                ],
+                'Multimedia' => [
+                    ['npm' => '2310110007', 'nama' => 'M. Alif Abrar', 'Keterangan' => 'Koordinator', 'kelas' => 'B'],
+                    ['npm' => '2310110008', 'nama' => 'Nugraha Aji', 'Keterangan' => 'Anggota', 'kelas' => 'D'],
                 ],
             ],
             'Semester 5' => [
-                'Kecerdasan Buatan' => [
-                    ['npm' => '2310110009', 'nama' => 'Indah Meilani', 'Keterangan' => 'Koordinator', 'kelas' => 'A'],
-                    ['npm' => '2310110010', 'nama' => 'Joko Setiawan', 'Keterangan' => 'Anggota', 'kelas' => 'B'],
+                'Sistem Pakar' => [
+                    ['npm' => '2210110009', 'nama' => 'Febrina Aulia A', 'Keterangan' => 'Koordinator', 'kelas' => 'A'],
+                    ['npm' => '2210110010', 'nama' => 'Wildan Mukmin', 'Keterangan' => 'Anggota', 'kelas' => 'B'],
                 ],
-                'Rekayasa Perangkat Lunak' => [
-                    ['npm' => '2310110011', 'nama' => 'Kiki Ardian', 'Keterangan' => 'Koordinator', 'kelas' => 'C'],
-                    ['npm' => '2310110012', 'nama' => 'Laras Sari', 'Keterangan' => 'Anggota', 'kelas' => 'D'],
+                'Web Lanjut' => [
+                    ['npm' => '2210110011', 'nama' => 'Bungaran Natanael', 'Keterangan' => 'Koordinator', 'kelas' => 'C'],
+                    ['npm' => '2210110012', 'nama' => 'Alia Rahayu', 'Keterangan' => 'Anggota', 'kelas' => 'D'],
                 ],
             ],
         ];
@@ -87,5 +87,8 @@ require_once '../head-nav-foo/navbar.php';
         ?>
     </div>
 </body>
+<?php
+    require_once '../head-nav-foo/footer.php';
+?>
 
 </html>

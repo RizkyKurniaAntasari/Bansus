@@ -9,11 +9,14 @@ if (!$conn) {
 }
 
 $sql = "DELETE FROM asdos WHERE npm = '$npm'";
+$sql_remove_pendaftaran = "DELETE FROM pendaftaran WHERE npm = '$npm'";
+
+if(mysqli_query($conn, $sql_remove_pendaftaran)){}
 
 if (mysqli_query($conn, $sql)) {
     echo "Akun berhasil dihapus.";
     session_destroy();
-    header("Location: /teori/bansus/index.php");
+    header("Location: " . BASE_URL . "/index.php");
     exit();
 } else {
     echo "Gagal menghapus akun: " . mysqli_error($conn);

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../../db.php';
+require_once '../../db.php';
 
 $npm = $_POST['npm'];
 $password = $_POST['password'];
@@ -11,11 +11,11 @@ $user = mysqli_fetch_assoc($result);
 
 if ($user && password_verify($password, $user['password'])) {
     $_SESSION['user'] = $user['npm'];
-    header("Location: /teori/bansus/views/asdos/index.php");
+    header("Location: " . BASE_URL . "/views/asdos/index.php");
     exit();
 } else {
     $_SESSION['error'] = "npm atau password salah";
-    header("Location: /teori/bansus/login.php");
+    header("Location: " . BASE_URL . "/login.php");
     exit();
 }
 ?>

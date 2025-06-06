@@ -61,5 +61,8 @@ require_once '../head-nav-foo/navbar.php';
         </div>
     </div>
 </body>
+<?php
+    require_once '../head-nav-foo/footer.php';
+?>
 
 </html>
