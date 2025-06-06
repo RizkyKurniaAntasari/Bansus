@@ -1,7 +1,6 @@
 <?php
 $currentPage = basename($_SERVER['PHP_SELF']);
-require_once '../head-nav-foo/header.php';
-require_once '../head-nav-foo/navbar.php';
+require_once 'needs/kontak_kami_needs.php'
 ?>
 <!DOCTYPE html>
 <html lang="en">

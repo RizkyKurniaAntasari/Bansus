@@ -5,49 +5,49 @@ require_once '../head-nav-foo/navbar.php';
 ?>
 <!-- Data Matkul -->
 <?php
-            $matkul = [
-                [
-                    'nama' => 'Logika',
-                    'dosen' => 'Ani Rose Irawati, S.T., M.Cs.',
-                    'kuota' => 10
-                ],
-                [
-                    'nama' => 'Basis Data',
-                    'dosen' => 'Dr. Aristoteles, S.Si., M.Si.',
-                    'kuota' => 8
-                ],
-                [
-                    'nama' => 'Multimedia',
-                    'dosen' => 'Yunda Heningtyas, M. Kom.',
-                    'kuota' => 4
-                ],
-                [
-                    'nama' => 'Pem. Interpreter',
-                    'dosen' => 'Rahman Taufik, M.Kom',
-                    'kuota' => 4
-                ],
-                [
-                    'nama' => 'Komdat Jarkom',
-                    'dosen' => 'RICO ANDRIAN, S.Si., M.Kom.',
-                    'kuota' => 8
-                ],
-                [
-                    'nama' => 'DDP',
-                    'dosen' => 'Dwi Sakethi, S.Si., M.Kom.',
-                    'kuota' => 10
-                ],
-                [
-                    'nama' => 'Matematika',
-                    'dosen' => 'Dewi Asiah Shofiana, M.Kom',
-                    'kuota' => 10
-                ],
-                [
-                    'nama' => 'PBO',
-                    'dosen' => 'DIDIK KURNIAWAN S.SI, M.T',
-                    'kuota' => 8
-                ],
-            ];
-            ?>
+$matkul = [
+    [
+        'nama' => 'Logika',
+        'dosen' => 'Ani Rose Irawati, S.T., M.Cs.',
+        'kuota' => 10
+    ],
+    [
+        'nama' => 'Basis Data',
+        'dosen' => 'Dr. Aristoteles, S.Si., M.Si.',
+        'kuota' => 8
+    ],
+    [
+        'nama' => 'Multimedia',
+        'dosen' => 'Yunda Heningtyas, M. Kom.',
+        'kuota' => 4
+    ],
+    [
+        'nama' => 'Pem. Interpreter',
+        'dosen' => 'Rahman Taufik, M.Kom',
+        'kuota' => 4
+    ],
+    [
+        'nama' => 'Komdat Jarkom',
+        'dosen' => 'RICO ANDRIAN, S.Si., M.Kom.',
+        'kuota' => 8
+    ],
+    [
+        'nama' => 'DDP',
+        'dosen' => 'Dwi Sakethi, S.Si., M.Kom.',
+        'kuota' => 10
+    ],
+    [
+        'nama' => 'Matematika',
+        'dosen' => 'Dewi Asiah Shofiana, M.Kom',
+        'kuota' => 10
+    ],
+    [
+        'nama' => 'PBO',
+        'dosen' => 'DIDIK KURNIAWAN S.SI, M.T',
+        'kuota' => 8
+    ],
+];
+?>
 
 <!DOCTYPE html>
 <html lang="id">
@@ -69,118 +69,7 @@ require_once '../head-nav-foo/navbar.php';
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
-    <style>
-        /* Keeping custom styles that are not part of Tailwind defaults */
-
-        .timeline-container::after {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 4px;
-            background-color: #e5e7eb;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: -1;
-        }
-
-        .slider-container {
-            position: relative;
-            overflow: hidden;
-            height: 600px;
-        }
-
-        .slider {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            height: 100%;
-        }
-
-        .slide {
-            min-width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .slide-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to right,
-                    rgba(0, 0, 0, 0.7) 0%,
-                    rgba(0, 0, 0, 0.3) 50%,
-                    rgba(0, 0, 0, 0) 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding-left: 10%;
-        }
-
-        .slide-content {
-            max-width: 600px;
-        }
-
-        .slider-nav {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-        }
-
-        .slider-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.5);
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .slider-dot.active {
-            background-color: #fff;
-        }
-
-        input[type="checkbox"] {
-            appearance: none;
-            -webkit-appearance: none;
-            width: 20px;
-            height: 20px;
-            border: 2px solid #d1d5db;
-            border-radius: 4px;
-            outline: none;
-            cursor: pointer;
-            position: relative;
-        }
-
-        input[type="checkbox"]:checked {
-            background-color: #ffcc00;
-            /* warna kuning */
-            border-color: #ffcc00;
-            /* warna kuning */
-        }
-
-        input[type="checkbox"]:checked::after {
-            content: "";
-            position: absolute;
-            width: 5px;
-            height: 10px;
-            border: solid white;
-            border-width: 0 2px 2px 0;
-            top: 2px;
-            left: 6px;
-            transform: rotate(45deg);
-        }
-
-        .search-input:focus {
-            outline: none;
-            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
-        }
-    </style>
+    <link rel="stylesheet" href="style/index_style.css">
 </head>
 
 <body class="bg-gray-50">
@@ -591,93 +480,7 @@ require_once '../head-nav-foo/navbar.php';
 
     <?php require_once '../head-nav-foo/footer.php'; ?>
 
-    <script id="slider-script">
-        document.addEventListener("DOMContentLoaded", function() {
-            const slider = document.querySelector(".slider");
-            const slides = document.querySelectorAll(".slide");
-            const dots = document.querySelectorAll(".slider-dot");
-            let currentSlide = 0;
-            const slideCount = slides.length;
-
-            function goToSlide(index) {
-                slider.style.transform = `translateX(-${index * 100}%)`;
-                dots.forEach((dot) => dot.classList.remove("active"));
-                dots[index].classList.add("active");
-                currentSlide = index;
-            }
-            dots.forEach((dot, index) => {
-                dot.addEventListener("click", () => {
-                    goToSlide(index);
-                });
-            });
-            function nextSlide() {
-                let next = currentSlide + 1;
-                if (next >= slideCount) {
-                    next = 0;
-                }
-                goToSlide(next);
-            }
-            const slideInterval = setInterval(nextSlide, 5000);
-            slider.addEventListener("mouseenter", () => {
-                clearInterval(slideInterval);
-            });
-        });
-    </script>
-
-    <script id="search-filter-script">
-        document.addEventListener("DOMContentLoaded", function() {
-            const searchInput = document.getElementById("search-matkul");
-            const filterAll = document.getElementById("filter_all");
-            const filterIlmuKomputer = document.getElementById("filter_ilmukomputer");
-            const filterSistemInformasi = document.getElementById(
-                "filter_sistem_informasi",
-            );
-            const filterManajemenInformatika = document.getElementById(
-                "filter_manajemeninformasir",
-            );
-            
-            searchInput.addEventListener("input", function() {
-                console.log("Searching for:", this.value);
-            });
-            filterAll.addEventListener("change", function() {
-                if (this.checked) {
-                    filterIlmuKomputer.checked = false;
-                    filterSistemInformasi.checked = false;
-                    filterManajemenInformatika.checked = false;
-                }
-            });
-            [filterIlmuKomputer, filterSistemInformasi, filterManajemenInformatika].forEach(
-                (filter) => {
-                    filter.addEventListener("change", function() {
-                        if (this.checked) {
-                            filterAll.checked = false;
-                        }
-                        if (
-                            !filterIlmuKomputer.checked &&
-                            !filterSistemInformasi.checked &&
-                            !filterManajemenInformatika.checked
-                        ) {
-                            filterAll.checked = true;
-                        }
-                    });
-                },
-            );
-        });
-    </script>
-
-    <script>
-        function toggleAccordion(id) {
-            const element = document.getElementById(id);
-            const arrow = document.getElementById(`${id}-arrow`);
-            if (element.classList.contains('hidden')) {
-                element.classList.remove('hidden');
-                arrow.classList.remove('rotate-180');
-            } else {
-                element.classList.add('hidden');
-                arrow.classList.add('rotate-180');
-            }
-        }
-    </script>
+    <script src="js/index_script.js"></script>
 
 </body>
 
