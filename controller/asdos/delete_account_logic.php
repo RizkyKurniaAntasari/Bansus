@@ -10,8 +10,10 @@ if (!$conn) {
 
 $sql = "DELETE FROM asdos WHERE npm = '$npm'";
 $sql_remove_pendaftaran = "DELETE FROM pendaftaran WHERE npm = '$npm'";
+$sql_remote_wawancara = "DELETE FROM jadwal_wawancara WHERE npm = '$npm'";
 
 if(mysqli_query($conn, $sql_remove_pendaftaran)){}
+if(mysqli_query($conn, $sql_remote_wawancara)){}
 
 if (mysqli_query($conn, $sql)) {
     echo "Akun berhasil dihapus.";

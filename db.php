@@ -10,6 +10,6 @@ if(!$conn){
     die("Error Connection : " . mysqli_connect_error());
 }
 if(!defined('BASE_URL')){
-    define('BASE_URL', '/teori/oprec'); // ubah nama sesuai dengan kita 'laragon/www/'teori/oprec''
+    define('BASE_URL', '/teori/bansus'); // ubah nama sesuai dengan kita 'laragon/www/'teori/bansus''
 }
 ?>
